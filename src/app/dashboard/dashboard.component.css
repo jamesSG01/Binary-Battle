@@ -1,0 +1,12 @@
+mat-card { 
+  margin-left: 200px;
+}
+mat-grid-list, mat-card-title,mat-card-subtitle {
+  color: aliceblue;
+}
+
+.controller { 
+  position: fixed;
+  left: 850px;
+  top: 100px;
+}
