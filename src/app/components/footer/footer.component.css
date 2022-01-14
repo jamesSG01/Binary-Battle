@@ -1,0 +1,6 @@
+.mat-toolbar {
+    color: aliceblue;
+    background: #1a202e;
+    position: fixed;
+    bottom: 0;
+}
