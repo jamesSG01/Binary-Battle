@@ -16,17 +16,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { ControllerComponent } from './components/controller/controller.component';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { BattleComponent } from './battle/battle.component';
+import { FooBarComponent } from './components/foo-bar/foo-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
     ComponentsComponent,
     ChartViewComponent,
-    DashboardComponent,
-    NavigationComponent,
-    ControllerComponent
+    ControllerComponent,
+    MainNavComponent,
+    BattleComponent,
+    FooBarComponent
   ],
   imports: [
     BrowserModule,

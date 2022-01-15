@@ -5,9 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#" routerLink="home">Price</a>
+      <a mat-list-item href="#" routerLink="home">Learn</a>
+      <a mat-list-item href="#" routerLink="home">Feature</a>
+      <a mat-list-item href="#" routerLink="home">Institutions</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,7 +21,17 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+     
       <span>Binary-Battle</span>
+      <span class="space"></span>
+      <div class="hidden-tablet" style="margin-right: 35px">
+        <a href="#" routerLink="home">Price</a>
+        <a href="#" routerLink="home">Learn</a>
+        <a href="#" routerLink="home">Feature</a>
+        <a href="#" routerLink="home">Institutions</a>
+      </div>
+      <button class="hidden-tablet" mat-stroked-button color="acent" routerLink="/login"> Login</button>
+      <button class="hidden-tablet" mat-flat-button color="acent" routerLink="/sign-up"> Get Started</button>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>

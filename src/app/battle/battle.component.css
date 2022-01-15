@@ -1,0 +1,11 @@
+mat-card { 
+    background: rgb(15, 15, 15);
+    margin: 15px;
+}
+.chart {
+    width: 800px;
+    height: 500px;
+}
+.control { 
+    width: 150px;
+}
