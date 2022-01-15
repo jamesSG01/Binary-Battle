@@ -1,12 +1,9 @@
-<mat-card class="chart">
-    <app-chart-view></app-chart-view>
-</mat-card>
-<mat-card class="control">
-    <app-controller></app-controller>
-</mat-card>
-<mat-card class="ranking">
-    ranking
-</mat-card>
-<mat-card>
-    history 
-</mat-card>
+<mat-grid-list cols="2" rowHeight="1:2"> 
+    <mat-grid-tile> 1 </mat-grid-tile>
+    <mat-card class="chart" style=" resize:both;
+    overflow:auto; ">
+        <app-chart-view></app-chart-view>
+    </mat-card>
+    <mat-grid-tile> 1 </mat-grid-tile>
+    <mat-grid-tile> 1 </mat-grid-tile>
+</mat-grid-list>

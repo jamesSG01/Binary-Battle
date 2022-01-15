@@ -1,9 +1,11 @@
 mat-card { 
     background: rgb(15, 15, 15);
     margin: 15px;
+    resize: both;
 }
 .chart {
     width: 800px;
+    max-width: 85%;
     height: 500px;
 }
 .control { 

@@ -3,9 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>    
+      <button mat-stroked-button color="acent" routerLink="/login"> Login</button>
+      <button mat-flat-button color="acent" routerLink="/sign-up"> Get Started</button>
+    </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#" routerLink="home">Price</a>
+      <a mat-list-item href="#" routerLink="/home">Price</a>
       <a mat-list-item href="#" routerLink="home">Learn</a>
       <a mat-list-item href="#" routerLink="home">Feature</a>
       <a mat-list-item href="#" routerLink="home">Institutions</a>
@@ -22,15 +25,18 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
      
-      <span>Binary-Battle</span>
+      <span> 
+        <img src="data:image/png;base64,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">
+        {{title}}
+      </span>
       <span class="space"></span>
       <div class="hidden-tablet" style="margin-right: 35px">
-        <a href="#" routerLink="home">Price</a>
-        <a href="#" routerLink="home">Learn</a>
+        <a href="#" routerLink="home">Home</a>
+        <a href="#" routerLink="home">Battle</a>
         <a href="#" routerLink="home">Feature</a>
         <a href="#" routerLink="home">Institutions</a>
       </div>
-      <button class="hidden-tablet" mat-stroked-button color="acent" routerLink="/login"> Login</button>
+      <button class="hidden-tablet" mat-stroked-button color="acent" routerLink="/battle"> Login</button>
       <button class="hidden-tablet" mat-flat-button color="acent" routerLink="/sign-up"> Get Started</button>
     </mat-toolbar>
     <!-- Add Content Here -->

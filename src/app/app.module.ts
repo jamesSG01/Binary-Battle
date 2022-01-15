@@ -20,6 +20,9 @@ import { ControllerComponent } from './components/controller/controller.componen
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { BattleComponent } from './battle/battle.component';
 import { FooBarComponent } from './components/foo-bar/foo-bar.component';
+import { HomeComponent } from './home/home.component';
+import { RankingComponent } from './battle/ranking/ranking.component';
+import { MatchesHistoryComponent } from './battle/matches-history/matches-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,10 @@ import { FooBarComponent } from './components/foo-bar/foo-bar.component';
     ControllerComponent,
     MainNavComponent,
     BattleComponent,
-    FooBarComponent
+    FooBarComponent,
+    HomeComponent,
+    RankingComponent,
+    MatchesHistoryComponent
   ],
   imports: [
     BrowserModule,
