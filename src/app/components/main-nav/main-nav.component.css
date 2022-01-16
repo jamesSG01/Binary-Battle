@@ -43,7 +43,7 @@
   .hidden-tablet { 
     display: flex;
   }
-  .sidenav, #btn-toggle { 
+  .sidenav { 
     display: none;
   }
 }
