@@ -25,6 +25,7 @@ import { RankingComponent } from './battle/ranking/ranking.component';
 import { MatchesHistoryComponent } from './battle/matches-history/matches-history.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { HistoryComponent } from './battle/history/history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { SignupComponent } from './signup/signup.component';
     RankingComponent,
     MatchesHistoryComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

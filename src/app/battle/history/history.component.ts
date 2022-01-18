@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
-var  playerRplayers 
 @Component({
-  selector: 'app-ranking',
-  templateUrl: './ranking.component.html',
-  styleUrls: ['./ranking.component.css']
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.css']
 })
-export class RankingComponent implements OnInit {
-  constructor() {}
+export class HistoryComponent implements OnInit {
+
+  constructor() { }
+
   ngOnInit(): void {
   }
-  players = [
+  games = [
     { id: 11, name: 'Dr Nice' },
     { id: 12, name: 'Narco' },
     { id: 13, name: 'Bombasto' },

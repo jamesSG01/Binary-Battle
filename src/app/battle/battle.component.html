@@ -1,9 +1,15 @@
 <mat-grid-list cols="2" rowHeight="1:2"> 
-    <mat-grid-tile> 1 </mat-grid-tile>
     <mat-card class="chart" style=" resize:both;
     overflow:auto; ">
         <app-chart-view></app-chart-view>
     </mat-card>
-    <mat-grid-tile> 1 </mat-grid-tile>
-    <mat-grid-tile> 1 </mat-grid-tile>
+    <mat-card>
+        <h3> history</h3>
+        <app-history></app-history>
+    </mat-card>
+    
+    <mat-card>
+        <h3> ranking </h3>
+        <app-ranking></app-ranking>
+    </mat-card>
 </mat-grid-list>

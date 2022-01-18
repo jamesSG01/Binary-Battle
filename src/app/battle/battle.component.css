@@ -3,6 +3,9 @@ mat-card {
     margin: 15px;
     resize: both;
 }
+h3 { 
+    color: aliceblue;
+}
 .chart {
     width: 800px;
     max-width: 85%;
