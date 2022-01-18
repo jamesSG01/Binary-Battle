@@ -1,12 +1,19 @@
 <mat-card>
-    <table style="width:80%" id="printarea">
-        <tr>
-          <th>Id</th>
-          <th>Name</th> 
-        </tr>
-        <tr  *ngFor="let game of games">
-          <td>{{game.id}}</td>
-          <td>{{game.name}}</td>       
-        </tr>
-      </table>
+  <h1> 
+    <mat-icon>account_circle</mat-icon>
+    {{username}}
+  </h1>
+  <table style="width:80%" id="printarea">
+    <tr>
+      <th>Result</th>
+      <th>PnL</th>
+      <th>Points</th>
+
+    </tr>
+    <tr  *ngFor="let game of games">
+      <td>{{game.res}} {{game.date}} </td>
+      <td>{{game.pnl}} Coins</td>
+      <td>{{game.pnlPoint}} </td>
+    </tr>
+  </table>
 </mat-card>

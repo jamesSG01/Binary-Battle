@@ -1,0 +1,14 @@
+th,tr,td {
+    text-align: center;
+}
+table {
+    width: 100%;
+    height: 100%;
+    min-height: max-content;
+}
+.container {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    min-height: max-content;
+}

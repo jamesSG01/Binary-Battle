@@ -1,10 +1,20 @@
 mat-card { 
     background: rgb(15, 15, 15);
+    min-width: max-content;
     margin: 15px;
     resize: both;
+    resize:both;
+    overflow:auto; 
+    min-height: max-content;
+    min-height: max-content;
+    color: aliceblue;
 }
 h3 { 
     color: aliceblue;
+}
+
+.container {
+    display: flex;
 }
 .chart {
     width: 800px;
@@ -12,5 +22,5 @@ h3 {
     height: 500px;
 }
 .control { 
-    width: 150px;
+    width: 350px;
 }

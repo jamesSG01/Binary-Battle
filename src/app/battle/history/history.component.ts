@@ -11,16 +11,17 @@ export class HistoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  username = 'JoeMaMa';
   games = [
-    { id: 11, name: 'Dr Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
+    { res:true, date: '09-05-22 13:49', pnl: 150, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: -10, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 20, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: -50, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 130, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 120, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 10, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 750, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: -10, pnlPoint: 100 },
+    { res:true, date: '09-05-22 13:49', pnl: 12, pnlPoint: 100 },
   ];
 }
