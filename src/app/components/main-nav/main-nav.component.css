@@ -1,6 +1,16 @@
-
+mat-sidenav-container,mat-sidenav,mat-toolbar  {
+  background: none;
+  background-color: none;
+}
+span,button {
+  color: aliceblue;
+}
 .sidenav-container {
   height: 100%;
+  position: sticky;
+  top: 0;
+  background-color: rgba(77, 77, 77, 0.02);
+  backdrop-filter: blur(10px);
 }
 
 .sidenav {
@@ -8,9 +18,7 @@
   height: 100%;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
-}
+
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -30,7 +38,7 @@
 }
 
 .space {
-  flex: 1 1 0;
+  flex: 1 0 0;
 }
 
 #btn-toggle { 
@@ -38,6 +46,12 @@
   z-index: 9999;
   right: 10px;
   top: 10px;
+}
+#started-btn:hover {
+  background-image: linear-gradient(to right top, #3f51b5, #0088e8, #00b5d4, #00d786, #a8eb12);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+  transition-duration: 0.5s;
 }
 @media (min-width: 768px) {
   .hidden-tablet { 

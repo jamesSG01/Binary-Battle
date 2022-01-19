@@ -10,7 +10,8 @@ div {
 .container-1 > *, .container-2 > * {
     border: rgb(43, 43, 43) 1px solid;
     border-radius: 15px;
-    background-color: #1a1d22;
+    background-color: rgba(77, 77, 77, 0.02);
+    backdrop-filter: blur(2px);
     margin: 4px;
 }
 .container-1 {

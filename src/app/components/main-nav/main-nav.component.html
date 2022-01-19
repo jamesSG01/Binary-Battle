@@ -14,7 +14,7 @@
     </button>
     <mat-toolbar>    
       <button mat-stroked-button color="acent" routerLink="/login"> Login</button>
-      <button mat-flat-button color="acent" routerLink="/sign-up"> Get Started</button>
+      <button mat-flat-button color="primary" routerLink="/sign-up"> Get Started</button>
     </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#" routerLink="/home">Price</a>
@@ -24,7 +24,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary"> 
+    <mat-toolbar id="nav-bar"> 
       <button 
       id="btn-toggle"
       type="button"
@@ -39,14 +39,15 @@
         {{title}}
       </span>
       <span class="space"></span>
+
       <div class="hidden-tablet" style="margin-right: 35px">
         <a href="#" routerLink="home">Home</a>
+        <a href="#" routerLink="home">Guide</a>
         <a href="#" routerLink="battle">Battle</a>
-        <a href="#" routerLink="home">Feature</a>
-        <a href="#" routerLink="home">Institutions</a>
       </div>
-      <button class="hidden-tablet" mat-stroked-button color="acent" routerLink="/login"> Login</button>
-      <button class="hidden-tablet" mat-flat-button color="acent" routerLink="/signup"> Get Started</button>
+      <span class="space"></span>
+      <button class="hidden-tablet" mat-stroked-button color="acent" routerLink="/login"> LOGIN</button>
+      <button class="hidden-tablet" mat-flat-button color="primary" routerLink="/signup" id="started-btn"> GET STARTED</button>
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>

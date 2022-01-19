@@ -1,5 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body{
     margin: 0%;
     background-color: #14161a;
+    background-image: url(./assets/chart-background.png) ;
+    background-repeat: repeat;
 }
