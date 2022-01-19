@@ -12,3 +12,6 @@ table {
     height: 100%;
     min-height: max-content;
 }
+.wrapper-history {
+    margin: 25px;
+}

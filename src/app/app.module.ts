@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components/components.component';
-import { ChartViewComponent } from './components/chart-view/chart-view.component';
+import { ChartViewComponent } from './battle/chart-view/chart-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*  Import Angular Material */
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule, MatIcon} from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+import {FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -52,7 +53,8 @@ import { ControlComponent } from './battle/control/control.component';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

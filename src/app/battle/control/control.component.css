@@ -4,7 +4,6 @@ mat-list {
     align-items: center;
 }
 .ls-container {
-    min-height: 100px;
     display: flex;
     align-items: center;
 }
@@ -13,4 +12,12 @@ mat-list {
     margin: 5px;
     min-width: 200px;
     min-height: 60px;
+}
+mat-card { 
+    width: 100%;
+
+}
+
+form {
+    margin: 25px;
 }

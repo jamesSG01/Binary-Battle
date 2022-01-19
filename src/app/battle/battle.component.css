@@ -1,26 +1,25 @@
-mat-card { 
-    background: rgb(15, 15, 15);
-    min-width: max-content;
-    margin: 15px;
-    resize: both;
-    resize:both;
-    overflow:auto; 
-    min-height: max-content;
-    min-height: max-content;
-    color: aliceblue;
+
+*{
+    color: rgb(215, 220, 224);
 }
-h3 { 
-    color: aliceblue;
+div {
+    display: block  ;
 }
 
-.container {
-    display: flex;
+.container-1, .container-2 {
+    margin: 10px;
 }
-.chart {
-    width: 800px;
-    max-width: 85%;
-    height: 500px;
+.container-1 {
+    width: 70vw;
+    height: 90vh;
+    background-color: #1a1d22;
+    resize: horizontal;
+    overflow: auto;
 }
-.control { 
-    width: 350px;
+.container-2 {
+    
+    width: 30vw;
+    height: 90vh;
+    background-color: #1a1d22;
+
 }

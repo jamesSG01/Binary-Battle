@@ -1,18 +1,15 @@
-<div class="container" > 
-    <mat-card class="chart">
-        <app-chart-view></app-chart-view>
-    </mat-card>
-
-    <mat-card class="control">
-        <app-control></app-control>
-    </mat-card>
-    <mat-card>
-        <h3> HISTORY </h3>
-        <app-history></app-history>
-    </mat-card>
-    
-    <mat-card >
-        <h3> RANKING </h3>
-        <app-ranking></app-ranking>
-    </mat-card>
+<div fxLayout="row" fxLayout.xs="column"> 
+        <div class="container-1" fxLayout="column" fxFlexAlign="baseline" fxLayoutGap="10px">
+                <app-chart-view></app-chart-view>
+                <app-ranking ></app-ranking>
+        </div>
+        
+        <div class="container-2" fxLayout="column"  fxFlexAlign="center" fxLayoutGap="10px">
+                <div >
+                        <app-control></app-control>
+                </div>
+                <div>
+                        <app-history></app-history>
+                </div>
+        </div>
 </div>
