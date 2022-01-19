@@ -21,3 +21,7 @@ mat-card {
 form {
     margin: 25px;
 }
+.control-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+}

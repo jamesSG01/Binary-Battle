@@ -6,20 +6,19 @@ div {
     display: block  ;
 }
 
-.container-1, .container-2 {
-    margin: 10px;
+
+.container-1 > *, .container-2 > * {
+    border: rgb(43, 43, 43) 1px solid;
+    border-radius: 15px;
+    background-color: #1a1d22;
+    margin: 4px;
 }
 .container-1 {
     width: 70vw;
-    height: 90vh;
-    background-color: #1a1d22;
-    resize: horizontal;
-    overflow: auto;
+    height: max-content;
 }
-.container-2 {
-    
-    width: 30vw;
-    height: 90vh;
-    background-color: #1a1d22;
 
+.container-2 {
+    width: 30vw;
+    height: max-content;
 }
