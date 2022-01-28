@@ -22,8 +22,6 @@ import { BattleComponent } from './battle/battle.component';
 import { FooBarComponent } from './components/foo-bar/foo-bar.component';
 import { HomeComponent } from './home/home.component';
 import { RankingComponent } from './battle/ranking/ranking.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { HistoryComponent } from './battle/history/history.component';
 import { ControlComponent } from './battle/control/control.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -45,8 +43,6 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     FooBarComponent,
     HomeComponent,
     RankingComponent,
-    LoginComponent,
-    SignupComponent,
     HistoryComponent,
     ControlComponent,
     LoginFormComponent,
