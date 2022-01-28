@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// ...omitted
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HistoryComponent } from './battle/history/history.component';
 import { ControlComponent } from './battle/control/control.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +44,8 @@ import { ControlComponent } from './battle/control/control.component';
     LoginComponent,
     SignupComponent,
     HistoryComponent,
-    ControlComponent
+    ControlComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
