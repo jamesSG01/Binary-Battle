@@ -32,6 +32,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     HistoryComponent,
     ControlComponent,
     LoginFormComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
   ],
   imports: [
     BrowserModule,
