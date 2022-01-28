@@ -1,25 +1,37 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { LoginComponent } from './login.component';
+@Component({
+  selector: 'ngbytes-login-form',
+  templateUrl: './signin-form.component.html',
+  styleUrls: ['./signin-form.component.css'],
+})
+export class LoginFormComponent implements OnInit {
+  @Output() formData: EventEmitter<{
+    email: string;
+    password: string;
+  }> = new EventEmitter();
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+  form: FormGroup;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
-  });
+  constructor(private fb: FormBuilder) {}
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
+    this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  get email() {
+    return this.form.get('email');
+  }
+
+  get password() {
+    return this.form.get('password');
+  }
+
+  onSubmit() {
+    this.formData.emit(this.form.value);
+  }
+}

@@ -26,6 +26,15 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HistoryComponent } from './battle/history/history.component';
 import { ControlComponent } from './battle/control/control.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +48,8 @@ import { ControlComponent } from './battle/control/control.component';
     LoginComponent,
     SignupComponent,
     HistoryComponent,
-    ControlComponent
+    ControlComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +64,14 @@ import { ControlComponent } from './battle/control/control.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
