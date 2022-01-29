@@ -1,4 +1,6 @@
-
+body{
+    overflow:hidden;
+}
 *{
     color: rgb(215, 220, 224);
 }
@@ -15,15 +17,13 @@ div {
     margin: 4px;
 }
 .container-1 {
-    width: 100vw;
+    width: 98vw;
     height:max-content;
 }
 app-chart-view { 
     margin: 15px;
 }
-app-control {
-    width: 80vw;
-}
+
 .chart-view-container {
     display: flex;
     align-items: center;

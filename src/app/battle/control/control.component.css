@@ -17,7 +17,7 @@ mat-list-item {
     max-width: 100px;
     width: 100px;
     height: 50px;
-    border-radius: 15px;
+    border-radius: 25px;
     overflow: hidden;
     border: none;
     
@@ -63,7 +63,7 @@ form {
 }
 
 #long-btn {
-    background-image: linear-gradient(to right top, #1a3763, #bbe464);
+    background-image: linear-gradient(to right top, #1a3763, #06ffc1);
 
 }
 #long-btn:hover {
@@ -73,7 +73,7 @@ form {
     0 0 100px 20px #47db78, /* middle magenta */
     0 0 140px 50px #5183df; /* outer cyan */}  
 #short-btn{ 
-    background-image: linear-gradient(to right bottom, #ce79fc, #ee4b53);
+    background-image: linear-gradient(to right bottom, #ff4d2d, #ee4b53);
 }
 #short-btn:hover {
     box-shadow:
@@ -82,3 +82,4 @@ form {
     0 0 140px 50px #ff0058; /* outer cyan */
     background-image: linear-gradient(to right bottom, #a939e5, #d900b6, #ee0086, #f10059, #e52730);
 }
+
