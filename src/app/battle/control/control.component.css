@@ -6,6 +6,12 @@ mat-list {
 button {
     background: none;
 }
+span,h1 {
+    font-family: 'Syne', sans-serif;
+}
+h1,h2,h3{ 
+    font-weight: bold;
+}
 mat-list-item {
     margin: 5px;
     max-width: 100px;
@@ -54,7 +60,6 @@ form {
 .control-wrapper {
     overflow: hidden;
     border-radius: 15px;
-    
 }
 
 #long-btn {

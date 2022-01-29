@@ -1,3 +1,26 @@
-<mat-card>
-    <app-login-form></app-login-form>
-</mat-card>
+<app-main-nav></app-main-nav>
+<div class="background">
+    <div class="login-container">
+      <div class="text-container">
+        <h1>Hey Stranger</h1>
+        <p>
+          Want to create an awesome account to access this awesome app? Go ahead
+          and click the button below!
+        </p>
+        <button mat-button routerLink="/register">Sign up</button>
+      </div>
+      <div class="form-container">
+        <h1>Login</h1>
+        <h5>Sign in with your BinaryBattle account</h5>
+        <app-login-form (formData)="login($event)"></app-login-form>
+        <h5>Or sign in with:</h5>
+
+        <div>
+          <button class="mat-raised-button" >
+            <img width="15px" style="margin-top:15px; ;margin-right:5px" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+            Google Account
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>

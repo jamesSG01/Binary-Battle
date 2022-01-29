@@ -10,24 +10,46 @@ declare const TradingView: any;
 export class ChartViewComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
-    new TradingView.widget(
+    new TradingView.MediumWidget(
       {
-      "autosize": true,
-      "symbol": "COINBASE:BTCUSD",
-      "timezone": "Etc/UTC",
-      "theme": "dark",
-      "style": "1",
+      "symbols": [
+        [
+          "COINBASE:BTCUSD|1D"
+        ],
+        [
+          "FX:USDCAD|1D"
+        ],
+        [
+          "S&P",
+          "AMEX:SPY|1D"
+        ],
+        [
+          "OANDA:XAUUSD|1D"
+        ]
+      ],
+      "chartOnly": true,
+      "width": "900",
+      "height": "400",
       "locale": "en",
-      "toolbar_bg": "#f1f3f6",
-      "enable_publishing": false,
-      "hide_legend": true,
-      "range": "1D",
-      "save_image": false,
-      "container_id": "tradingview_ae039"
+      "colorTheme": "dark",
+      "gridLineColor": "rgba(0, 0, 0, 0)",
+      "fontColor": "#787B86",
+      "isTransparent": true,
+      "autosize": false,
+      "showVolume": false,
+      "scalePosition": "no",
+      "scaleMode": "Normal",
+      "fontFamily": "Andale Mono, monospace",
+      "noTimeScale": false,
+      "valuesTracking": "1",
+      "chartType": "area",
+      "lineColor": "rgba(0, 255, 0, 1)",
+      "bottomColor": "rgba(0, 0, 0, 0)",
+      "topColor": "rgba(0, 255, 0, 0.3)",
+      "container_id": "tradingview_11397"
     }
-      );
+    );
   }
 
 }

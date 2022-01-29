@@ -1,13 +1,13 @@
-<!-- 
+
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
     <mat-form-field class="form-control">
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email" type="text" required />
-      <mat-error *ngIf="email?.hasError('required')">
-        Email is required
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" type="text" required />
+      <mat-error *ngIf="username?.hasError('required')">
+        Username is required
       </mat-error>
-      <mat-error *ngIf="email?.hasError('email')">
-        Email isn't valid. Please enter a valid email.
+      <mat-error *ngIf="username?.hasError('email')">
+        Username isn't valid. Please enter a valid Username.
       </mat-error>
     </mat-form-field>
     <mat-form-field class="form-control">
@@ -22,5 +22,5 @@
         Submit
       </button>
     </div>
-  </form> -->
-  <p> form goes here !  </p>
+   
+  </form> 

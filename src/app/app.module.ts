@@ -34,7 +34,7 @@ import { MatInputModule } from '@angular/material/input';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
-
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +52,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     RegisterPageComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
