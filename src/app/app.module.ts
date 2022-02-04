@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components/components.component';
-import { ChartViewComponent } from './battle/chart-view/chart-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*  Import Angular Material */
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -16,12 +15,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { BattleComponent } from './battle/battle.component';
+import { BattleComponent } from './pages/battle/battle.component';
 import { FooBarComponent } from './components/foo-bar/foo-bar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { RankingComponent } from './battle/ranking/ranking.component';
-import { HistoryComponent } from './battle/history/history.component';
-import { ControlComponent } from './battle/control/control.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -38,13 +34,9 @@ import { GlobalFooterComponent } from './shared/components/global-footer/global-
   declarations: [
     AppComponent,
     ComponentsComponent,
-    ChartViewComponent,
     BattleComponent,
     FooBarComponent,
     HomeComponent,
-    RankingComponent,
-    HistoryComponent,
-    ControlComponent,
     LoginFormComponent,
     AuthenticationComponent,
     GlobalHeaderComponent,
