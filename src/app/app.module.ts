@@ -27,6 +27,9 @@ import { CommonModule } from '@angular/common';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { GlobalHeaderComponent } from './shared/components/global-header/global-header.component';
 import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
+import { PriceChartComponent } from './pages/battle/price-chart/price-chart.component';
+import { RankingComponent } from './pages/battle/ranking/ranking.component';
+import { HistoryComponent } from './pages/battle/history/history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,9 @@ import { GlobalFooterComponent } from './shared/components/global-footer/global-
     AuthenticationComponent,
     GlobalHeaderComponent,
     GlobalFooterComponent,
+    PriceChartComponent,
+    RankingComponent,
+    HistoryComponent,
   ],
   imports: [
     CommonModule,
