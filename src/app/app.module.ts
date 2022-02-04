@@ -30,6 +30,7 @@ import { GlobalFooterComponent } from './shared/components/global-footer/global-
 import { PriceChartComponent } from './pages/battle/price-chart/price-chart.component';
 import { RankingComponent } from './pages/battle/ranking/ranking.component';
 import { HistoryComponent } from './pages/battle/history/history.component';
+import { ControlComponent } from './pages/battle/control/control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { HistoryComponent } from './pages/battle/history/history.component';
     PriceChartComponent,
     RankingComponent,
     HistoryComponent,
+    ControlComponent,
   ],
   imports: [
     CommonModule,

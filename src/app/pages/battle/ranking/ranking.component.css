@@ -1,0 +1,11 @@
+table { 
+    width: 100%;
+    margin: 15px;
+}
+table, th,tr,td {
+    text-align: center;
+}
+.ranking-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+}
