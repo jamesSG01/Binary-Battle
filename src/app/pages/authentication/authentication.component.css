@@ -28,7 +28,7 @@ span {
 }
 
 a {
-	color: #333;
+	color: rgb(94, 94, 94);
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
@@ -37,7 +37,7 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	background-color: rgb(235, 100, 77);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -61,8 +61,11 @@ button.ghost {
 }
 
 form {
-	background-color: #FFFFFF;
-	display: flex;
+    border: rgb(43, 43, 43) 1px solid;
+    border-radius: 15px;
+    background-color: rgb(39, 21, 44);
+    backdrop-filter: blur(10px);
+    display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
@@ -72,15 +75,17 @@ form {
 }
 
 input {
-	background-color: #eee;
-	border: none;
+    border: rgb(100, 100, 100) 1px solid;
+    border-radius: 15px;
+    background-color: rgba(138, 137, 137, 0.1);
+    backdrop-filter: blur(2px);	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
 }
 
 .container {
-	background-color: #fff;
+	background-color: rgb(46, 25, 95);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -149,12 +154,7 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
+	background: url('src/assets/ath-gfx-app.png');
 	color: #FFFFFF;
 	position: relative;
 	left: -100%;
@@ -227,15 +227,3 @@ footer {
     z-index: 999;
 }
 
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
