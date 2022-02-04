@@ -1,16 +1,44 @@
 mat-list { 
-    min-height: 200px;
     display: flex;
     align-items: center;
+}
+.position-size{
+    height: 33px;
+    max-width: 60px;;
+    border: #5d5966 1px solid;
+    border-radius: 10px;
+    background: rgba(240, 248, 255,0.05);
+    backdrop-filter: blur(10px);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 button {
     background: none;
 }
 span,h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: sans-serif;
 }
 h1,h2,h3{ 
     font-weight: bold;
+    color: #7852c0;
+}
+
+.layer1 {
+    background-color: #11100f;
+    margin: 10px;
+}
+.account-balance {
+    color: rgb(107, 173, 189);
+    font-size: 1.1rem;
 }
 mat-list-item {
     margin: 5px;
@@ -51,7 +79,8 @@ mat-card {
 	-moz-transform: skew(-20deg); 
 	-o-transform: skew(-20deg); 
 }
-button {
+
+button,input{
     color: aliceblue;
 }
 form {
@@ -60,26 +89,22 @@ form {
 .control-wrapper {
     overflow: hidden;
     border-radius: 15px;
+    background-color: #11100f;
 }
 
 #long-btn {
-    background-image: linear-gradient(to right top, #1a3763, #06ffc1);
-
+    border: solid cadetblue 1px;
+    background-color: rgba(95, 158, 160, 0.8);
 }
 #long-btn:hover {
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    box-shadow:
-    0 0 60px 10px #fff,  /* inner white */
-    0 0 100px 20px #47db78, /* middle magenta */
-    0 0 140px 50px #5183df; /* outer cyan */}  
+    border: solid rgb(79, 213, 218) 2px;
+}  
 #short-btn{ 
-    background-image: linear-gradient(to right bottom, #ff4d2d, #ee4b53);
+    border: solid rgb(160, 95, 95) 1px;
+    background-color: rgba(241, 115, 93, 0.8);
+
 }
 #short-btn:hover {
-    box-shadow:
-    0 0 60px 10px #fff,  /* inner white */
-    0 0 100px 20px #03a9f4, /* middle magenta */
-    0 0 140px 50px #ff0058; /* outer cyan */
-    background-image: linear-gradient(to right bottom, #a939e5, #d900b6, #ee0086, #f10059, #e52730);
-}
+    border: solid rgb(247, 95, 49) 2px;
 
+}

@@ -1,0 +1,20 @@
+<app-global-header></app-global-header>
+<div fxLayout="row" fxLayout.xs="column"> 
+        <div class="container-1" fxLayout="column" fxFlexAlign="baseline">
+                <div class="chart-view-container">
+                        <app-price-chart></app-price-chart>
+                </div>
+                <div class="ranking-container">   
+                        <div>
+                                <h3>Global Rank</h3>
+                        </div>
+                        <app-ranking></app-ranking>
+                </div>
+
+        </div>
+        <div class="container-2" fxLayout="column"  fxFlexAlign="center">
+                <div>
+                    <app-control></app-control>
+                </div>
+        </div>
+</div>
