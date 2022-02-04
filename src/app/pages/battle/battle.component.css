@@ -18,7 +18,7 @@ div {
 }
 .container-1 {
     width: 70vw;
-    height:max-content;
+    height:70vh;
 }
 app-chart-view { 
     margin: 15px;

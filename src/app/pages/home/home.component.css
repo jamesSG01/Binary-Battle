@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+*{
+    color: cornsilk;
+}
 h1,h2,h4,h5{
     font-family: 'Syne', sans-serif;
 }
-.block-0{
+mat-card {
+    border: rgb(43, 43, 43) 1px solid;
+    border-radius: 15px;
+    background-color: rgba(77, 77, 77, 0.02);
+    backdrop-filter: blur(2px);
+}
+.welcome{
     display:flex;
     align-items: center;
     justify-content: center;

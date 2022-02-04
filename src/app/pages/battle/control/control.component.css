@@ -1,5 +1,4 @@
 mat-list { 
-    min-height: 200px;
     display: flex;
     align-items: center;
 }
@@ -10,10 +9,11 @@ button {
     background: none;
 }
 span,h1 {
-    font-family: 'Syne', sans-serif;
+    font-family: sans-serif;
 }
 h1,h2,h3{ 
     font-weight: bold;
+    color: #06ffc1;
 }
 
 .layer1 {
@@ -72,22 +72,18 @@ form {
 }
 
 #long-btn {
-    background-image: linear-gradient(to right top, #1a3763, #06ffc1);
-
+    border: solid cadetblue 1px;
+    background-color: rgba(95, 158, 160, 0.8);
 }
 #long-btn:hover {
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    box-shadow:
-    0 0 60px 10px #fff,  /* inner white */
-    0 0 100px 20px #47db78, /* middle magenta */
-    0 0 140px 50px #5183df; /* outer cyan */}  
+    border: solid rgb(79, 213, 218) 2px;
+}  
 #short-btn{ 
-    background-image: linear-gradient(to right bottom, #ff4d2d, #ee4b53);
+    border: solid rgb(160, 95, 95) 1px;
+    background-color: rgba(160, 95, 95, .8);
+
 }
 #short-btn:hover {
-    box-shadow:
-    0 0 60px 10px #fff,  /* inner white */
-    0 0 100px 20px #03a9f4, /* middle magenta */
-    0 0 140px 50px #ff0058; /* outer cyan */
-    background-image: linear-gradient(to right bottom, #a939e5, #d900b6, #ee0086, #f10059, #e52730);
+    border: solid rgb(206, 67, 67) 2px;
+
 }
