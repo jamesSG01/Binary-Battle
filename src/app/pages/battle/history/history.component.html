@@ -11,7 +11,11 @@
   
       </tr>
       <tr  *ngFor="let game of games">
-        <td>{{game.res}} {{game.date}} </td>
+        <td> 
+          <ng-template [ngIf]="game.res==true"><div>Victory</div></ng-template> 
+          <ng-template [ngIf]="game.res==false"><div>Lost</div></ng-template> 
+          {{game.date}}
+        </td>
         <td>{{game.pnl}} Coins</td>
         <td>{{game.pnlPoint}} </td>
       </tr>

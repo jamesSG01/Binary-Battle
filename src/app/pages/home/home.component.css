@@ -2,6 +2,9 @@
 *{
     color: cornsilk;
 }
+span {
+    font-size: larger;
+}
 h1,h2,h4,h5{
     font-family: 'Syne', sans-serif;
 }
@@ -21,14 +24,17 @@ mat-card {
     margin-top: 10%;
     text-align: center;
     color:rgb(199, 195, 195);
-    width: 50%;
-    max-width:400px;
     height: 70vh;
 }
 .container-text  h1 { 
     display:block;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #FFFFFF;
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
     font-weight:bolder;
 }
+.container-text  h2,.container-text  span { 
+    display: block;
+    margin: 100px;
+    font-size: 2em;
+} 

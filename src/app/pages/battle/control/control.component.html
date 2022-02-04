@@ -3,6 +3,12 @@
         <h1> Guess the Price & Win the Point </h1>
         <span> Battle against another player in 5 minutes session the win the price </span>
         <mat-card class="layer1">
+            <div> 
+                <h3>Account Balance</h3>
+                <div>
+                    <span class="account-balance"> 1021 B</span>
+                </div>
+            </div>
             <div>
                 <h3>Time period</h3>
                 <div class="range">
@@ -15,7 +21,7 @@
                     <mat-list-item> <button  mat-flat-button > 1 Coin </button> </mat-list-item>
                     <mat-list-item> <button  mat-flat-button > 5 Coin </button> </mat-list-item>
                     <mat-list-item> <button  mat-flat-button > 10 Coin </button> </mat-list-item>
-                    <mat-list-item> <input type="number" name="" id=""> </mat-list-item>
+                    <mat-list-item> <input mat-flat-button type="number" min="0" step="0.1" name="" class="position-size">  </mat-list-item>
                 </mat-list>
             </div>
             <div fxLayout="row wrap"  fxFlexAlign="center" class="ls-btns">
@@ -24,7 +30,7 @@
             </div>
         </mat-card>
     </form>
-    <mat-card>
+    <div>
         <app-history></app-history>
-    </mat-card>
+    </div>
 </div>

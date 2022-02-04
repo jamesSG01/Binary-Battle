@@ -23,7 +23,9 @@ div {
 app-chart-view { 
     margin: 15px;
 }
-
+.ranking-container {
+    height: 100%;
+}
 .chart-view-container {
     display: flex;
     align-items: center;
@@ -31,4 +33,7 @@ app-chart-view {
 }
 .container-2 {
     height: fit-content;
+}
+app-price-chart {
+    border: thistle 1px solid;
 }

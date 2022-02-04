@@ -2,8 +2,24 @@ mat-list {
     display: flex;
     align-items: center;
 }
-input{
-    width: 100%;
+.position-size{
+    height: 33px;
+    max-width: 60px;;
+    border: #5d5966 1px solid;
+    border-radius: 10px;
+    background: rgba(240, 248, 255,0.05);
+    backdrop-filter: blur(10px);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 button {
     background: none;
@@ -13,12 +29,16 @@ span,h1 {
 }
 h1,h2,h3{ 
     font-weight: bold;
-    color: #06ffc1;
+    color: #7852c0;
 }
 
 .layer1 {
     background-color: #11100f;
     margin: 10px;
+}
+.account-balance {
+    color: rgb(107, 173, 189);
+    font-size: 1.1rem;
 }
 mat-list-item {
     margin: 5px;
@@ -59,7 +79,8 @@ mat-card {
 	-moz-transform: skew(-20deg); 
 	-o-transform: skew(-20deg); 
 }
-button {
+
+button,input{
     color: aliceblue;
 }
 form {
@@ -80,10 +101,10 @@ form {
 }  
 #short-btn{ 
     border: solid rgb(160, 95, 95) 1px;
-    background-color: rgba(160, 95, 95, .8);
+    background-color: rgba(241, 115, 93, 0.8);
 
 }
 #short-btn:hover {
-    border: solid rgb(206, 67, 67) 2px;
+    border: solid rgb(247, 95, 49) 2px;
 
 }
