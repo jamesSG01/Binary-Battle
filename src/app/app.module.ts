@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components/components.component';
@@ -17,10 +16,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { BattleComponent } from './battle/battle.component';
 import { FooBarComponent } from './components/foo-bar/foo-bar.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { RankingComponent } from './battle/ranking/ranking.component';
 import { HistoryComponent } from './battle/history/history.component';
 import { ControlComponent } from './battle/control/control.component';
@@ -32,15 +30,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
 import { CommonModule } from '@angular/common';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { GlobalHeaderComponent } from './shared/components/global-header/global-header.component';
+import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     ComponentsComponent,
     ChartViewComponent,
-    MainNavComponent,
     BattleComponent,
     FooBarComponent,
     HomeComponent,
@@ -48,8 +46,9 @@ import { CommonModule } from '@angular/common';
     HistoryComponent,
     ControlComponent,
     LoginFormComponent,
-    LoginPageComponent,
-    RegisterPageComponent,
+    AuthenticationComponent,
+    GlobalHeaderComponent,
+    GlobalFooterComponent,
   ],
   imports: [
     CommonModule,
@@ -75,6 +74,7 @@ import { CommonModule } from '@angular/common';
     provideFirestore(() => getFirestore())
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
