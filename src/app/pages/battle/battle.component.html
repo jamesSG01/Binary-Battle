@@ -1,21 +1,20 @@
 <app-global-header></app-global-header>
-<div fxLayout="column" fxLayout.xs="column"> 
+<div fxLayout="row" fxLayout.xs="column"> 
         <div class="container-1" fxLayout="column" fxFlexAlign="baseline">
                 <div class="chart-view-container">
-
+                        <div>
+                            progress-bar
+                        </div>
                         <app-price-chart></app-price-chart>
-                        <app-control></app-control>
-
                 </div>
+                <div>
+                    <app-ranking></app-ranking>
+                </div>
+
         </div>
-        
-        <div class="container-2" fxLayout="row"  fxFlexAlign="center">
+        <div class="container-2" fxLayout="column"  fxFlexAlign="center">
                 <div>
-                        <app-ranking ></app-ranking>
-
-                </div>
-                <div>
-                        <app-history></app-history>
+                    <app-control></app-control>
                 </div>
         </div>
 </div>

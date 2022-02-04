@@ -2,17 +2,29 @@
     <form>
         <h1> Guess the Price & Win the Point </h1>
         <span> Battle against another player in 5 minutes session the win the price </span>
-        <mat-list fxLayout="row wrap"  fxFlexAlign="center">
-            <mat-list-item> <button  mat-flat-button > 1 Coin </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 5 Coin </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 10 Coin </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 50 Coin </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > __ Coin </button> </mat-list-item>
-            
-        </mat-list>
-        <div fxLayout="row wrap"  fxFlexAlign="center" class="ls-btns">
-            <button mat-raised-button fxFlex="47%" id="long-btn">LONG</button>
-            <button mat-raised-button  fxFlex="47%" id="short-btn">SHORT</button>
-        </div>
+        <mat-card class="layer1">
+            <div>
+                <h3>Time period</h3>
+                <div class="range">
+                    <input type="range" min="1" max="4" steps="1" value="1">
+                </div>
+            </div>
+            <div>
+                <h3>Position Size</h3>
+                <mat-list fxLayout="row wrap"  fxFlexAlign="center">
+                    <mat-list-item> <button  mat-flat-button > 1 Coin </button> </mat-list-item>
+                    <mat-list-item> <button  mat-flat-button > 5 Coin </button> </mat-list-item>
+                    <mat-list-item> <button  mat-flat-button > 10 Coin </button> </mat-list-item>
+                    <mat-list-item> <input type="number" name="" id=""> </mat-list-item>
+                </mat-list>
+            </div>
+            <div fxLayout="row wrap"  fxFlexAlign="center" class="ls-btns">
+                <button mat-raised-button fxFlex="47%" id="long-btn">LONG</button>
+                <button mat-raised-button  fxFlex="47%" id="short-btn">SHORT</button>
+            </div>
+        </mat-card>
     </form>
+    <mat-card>
+        <app-history></app-history>
+    </mat-card>
 </div>
