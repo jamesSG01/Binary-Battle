@@ -67,6 +67,7 @@ mat-sidenav-container,mat-sidenav,mat-toolbar  {
   }
   #login-btn{
     border-left: 1.7px solid rgb(53, 52, 52);
+    margin-left: 20px;
   }
   #battle-btn{
     border-radius: 30px;

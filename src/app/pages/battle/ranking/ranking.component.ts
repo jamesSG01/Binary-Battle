@@ -13,7 +13,7 @@ export class RankingComponent implements OnInit {
     
   }
   players = [
-    { rank: 1, name: 'Dr Nice' , point:123},
+    { id:1, name: 'Dr Nice' , point:123},
     { id: 5, name: 'Narco' ,point: 5221},
     { id: 2, name: 'Bombasto',point: 23 },
     { id: 14, name: 'Celeritas',point: 23 },

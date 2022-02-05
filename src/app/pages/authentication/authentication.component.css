@@ -36,8 +36,7 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: rgb(235, 100, 77);
+    background-image: linear-gradient(18.6deg, rgb(106, 73, 190) 19%, rgb(34, 168, 137) 91.7%);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -62,8 +61,7 @@ button.ghost {
 
 form {
     border: rgb(43, 43, 43) 1px solid;
-    border-radius: 15px;
-    background-color: rgb(39, 21, 44);
+    background-color: rgb(12, 12, 12);
     backdrop-filter: blur(10px);
     display: flex;
 	align-items: center;

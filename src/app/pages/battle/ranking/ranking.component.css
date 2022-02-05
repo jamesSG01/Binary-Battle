@@ -5,7 +5,14 @@ table {
 table, th,tr,td {
     text-align: center;
 }
-.ranking-wrapper {
+
+tr:hover {
+    border-bottom: 1px solid rgba(14, 16, 17,0.85) ;
+    border-top: 1px solid rgba(14, 16, 17,0.85) ;
+
+    background-color:rgba(14, 16, 17,0.35);
+}
+div[class*='ranking-wrapper'] {
     border-radius: 15px;
     overflow: hidden;
 }

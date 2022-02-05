@@ -18,3 +18,8 @@ table {
     border-radius: 15px;
     overflow: hidden;
 }
+tr:hover {
+    border-bottom: 1px solid rgba(46, 53, 56, 0.85) ;
+    border-top: 1px solid rgba(46, 53, 56, 0.85) ;
+    background-color:rgba(14, 16, 17,0.35);
+}

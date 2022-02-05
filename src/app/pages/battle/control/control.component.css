@@ -24,22 +24,13 @@ input[type=number] {
 button {
     background: none;
 }
-span,h1 {
-    font-family: sans-serif;
-}
-h1,h2,h3{ 
-    font-weight: bold;
-    color: #7852c0;
-}
+
 
 .layer1 {
     background-color: #11100f;
     margin: 10px;
 }
-.account-balance {
-    color: rgb(107, 173, 189);
-    font-size: 1.1rem;
-}
+
 mat-list-item {
     margin: 5px;
     max-width: 100px;
@@ -71,13 +62,10 @@ mat-card {
 
 .ls-btns button {
     font-size: 1.5rem;
-    font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: monospace;
     height: 50px;
     margin: 5px;
-    -webkit-transform: skew(-20deg);
-	-moz-transform: skew(-20deg); 
-	-o-transform: skew(-20deg); 
+
 }
 
 button,input{
@@ -94,15 +82,13 @@ form {
 
 #long-btn {
     border: solid cadetblue 1px;
-    background-color: rgba(95, 158, 160, 0.8);
-}
+    background-image: linear-gradient(18.6deg, rgb(106, 73, 190) 19%, rgb(34, 168, 137) 91.7%)}
 #long-btn:hover {
     border: solid rgb(79, 213, 218) 2px;
 }  
 #short-btn{ 
     border: solid rgb(160, 95, 95) 1px;
-    background-color: rgba(241, 115, 93, 0.8);
-
+    background-image: linear-gradient(100deg, rgb(214, 55, 77) 19%, rgb(70, 50, 158) 91.7%)
 }
 #short-btn:hover {
     border: solid rgb(247, 95, 49) 2px;

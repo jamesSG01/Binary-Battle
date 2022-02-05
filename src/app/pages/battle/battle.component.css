@@ -1,39 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     overflow:hidden;
 }
 *{
     color: rgb(215, 220, 224);
-}
-div {
+    font-family: 'Archivo', sans-serif;
     display: block  ;
+
+}
+h1,h2,h3 {
+    font-size: 1.5rem;
 }
 
+.low-boder{
+}
 
-.container-1 > *, .container-2 > * {
+div[class*='container'] {
     border: rgb(43, 43, 43) 1px solid;
     border-radius: 15px;
     background-color: rgba(77, 77, 77, 0.02);
     backdrop-filter: blur(2px);
     margin: 4px;
 }
-.container-1 {
-    width: 70vw;
-    height:70vh;
-}
-app-chart-view { 
-    margin: 15px;
-}
-.ranking-container {
-    height: 100%;
-}
-.chart-view-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.container-2 {
-    height: fit-content;
-}
-app-price-chart {
-    border: thistle 1px solid;
+app-ranking {
+    width: 100%;
 }
