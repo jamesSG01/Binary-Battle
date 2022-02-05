@@ -1,20 +1,24 @@
 <div class="control-wrapper">
     <form>
-        <h1> Guess the Price & Win the Point </h1>
-        <span> Battle against another player in 5 minutes session the win the price </span>
-        <div> 
+        <div>
+            <h1> Guess the Price & Win the Point </h1>
+            <span> Battle against another player in 5 minutes session the win the price </span>
+        </div>
+        <hr>
+        <div fxLayout="row wrap"> 
             <h1>Account Balance</h1>
             <div>
-                <span class="account-balance"> 1021 <i class="fab fa-gg-circle"></i></span>
+                <span class="account-balance"> 1,021 <i class="fab fa-gg-circle"></i></span>
             </div>
         </div>
         <div>
             <h1>Time period</h1>
             <div>
-                <input type="range" id="volume" name="volume"
+                <input class="size-slider" type="range" id="volume" name="volume"
                        min="0" max="11">
               </div>
         </div>
+        <h1>Amount</h1>
         <mat-list fxLayout="row wrap"  fxFlexAlign="center">
             <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
             <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
@@ -23,11 +27,15 @@
             <mat-list-item> <input mat-flat-button type="number" min="0" step="0.1" name="" placeholder="50" class="position-size">  </mat-list-item>            
         </mat-list>
         <div fxLayout="row wrap"  fxFlexAlign="center" class="ls-btns">
-            <button mat-raised-button fxFlex="47%" id="long-btn">LONG</button>
-            <button mat-raised-button  fxFlex="47%" id="short-btn">SHORT</button>
+            <button mat-raised-button fxFlex="45%" id="long-btn">LONG</button>
+            <button mat-raised-button  fxFlex="45%" id="short-btn">SHORT</button>
         </div>
     </form>
+    <hr>
     <div>
+        <div fxLayout="row wrap">
+           
+        </div>
         <app-history></app-history>
     </div>
 </div>

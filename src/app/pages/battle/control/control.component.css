@@ -2,6 +2,7 @@ mat-list {
     display: flex;
     align-items: center;
 }
+
 .position-size{
     height: 33px;
     max-width: 60px;;
@@ -27,7 +28,7 @@ button {
 
 
 .layer1 {
-    background-color: #11100f;
+    background-color: #18191e;
     margin: 10px;
 }
 
@@ -77,7 +78,7 @@ form {
 .control-wrapper {
     overflow: hidden;
     border-radius: 15px;
-    background-color: #11100f;
+    background-color: #18191e;
 }
 
 #long-btn {
@@ -92,5 +93,27 @@ form {
 }
 #short-btn:hover {
     border: solid rgb(247, 95, 49) 2px;
+}
+.u-btn {
+    background: none;
+    border: none;
+    padding:0.5rem 1rem;
+}
 
+.account-balance {
+    font-size: 25 rem;
+    margin-top:60px;
+}
+.size-slider {
+    width: 100%;
+}
+.u-btn:active::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 4px;
+    background-color: rgb(147, 141, 255);
+    border-radius: 1rem
 }

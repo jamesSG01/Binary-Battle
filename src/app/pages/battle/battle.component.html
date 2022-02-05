@@ -2,29 +2,28 @@
 <div fxLayout="row" fxLayout.xs="column"> 
         <div fxLayout="column">
                 <div class="container" fxLayout="column">
-                        <div class="low-boder">
+                        <div style="padding-top:20px">
                                 <h3>Realtime Chart</h3>
                         </div>
+                        <hr>
                         <div class="price-chart"> 
                                 <app-price-chart ></app-price-chart>
                         </div>
-                        <div class="container">
-                                Bull vs Bear 
-                        </div>
+                        
                 </div>
-                
                 <div class="container">   
-                        <div fxLayout="row" fxAlign="center">
-                                <div > <h3> All Time </h3> </div>
-                                <div> <h3> This Week </h3> </div>
+                        <div id="ranking-container" style="padding-top:20px" fxLayout="row" fxAlign="center">
+                                <h1> Leaderboard</h1>
+                                <button class="rank-btn"> All Time </button>
+                                <button class="rank-btn"> Past Month </button>                                <button class="rank-btn"> This Month </button>
+                                <button class="rank-btn"> Past Week </button>
                         </div>
+                        <hr>
                         <app-ranking></app-ranking>
                 </div>
 
         </div>
-        <div class="container-2" fxLayout="column"  fxFlexAlign="center">
-                <div>
-                    <app-control></app-control>
-                </div>
+        <div  fxLayout="column"  fxFlexAlign="center">
+                    <app-control class="container"></app-control>
         </div>
 </div>

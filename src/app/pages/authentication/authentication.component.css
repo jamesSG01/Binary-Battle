@@ -60,8 +60,7 @@ button.ghost {
 }
 
 form {
-    border: rgb(43, 43, 43) 1px solid;
-    background-color: rgb(12, 12, 12);
+    background-color: #000000;
     backdrop-filter: blur(10px);
     display: flex;
 	align-items: center;
