@@ -7,7 +7,9 @@
 
     </tr>
     <tr  *ngFor="let game of games">
-      <td>{{game.res}} {{game.date}} </td>
+      <td><div *ngIf="game.res; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>Won.</ng-template>
+        <ng-template #elseBlock>Lost</ng-template> {{game.date}} </td>
       <td>{{game.pnl}} Coins</td>
       <td>{{game.pnlPoint}} </td>
     </tr>

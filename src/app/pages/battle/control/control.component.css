@@ -4,9 +4,8 @@ mat-list {
 }
 
 .position-size{
-    height: 33px;
-    max-width: 60px;;
-    border: #5d5966 1px solid;
+    height: 50px;
+    border: #5d5966 1.2px solid;
     border-radius: 10px;
     background: rgba(240, 248, 255,0.05);
     backdrop-filter: blur(10px);
@@ -104,7 +103,6 @@ form {
 
 .account-balance {
     font-size: 25 rem;
-    margin-top:60px;
 }
 .size-slider {
     width: 100%;
