@@ -13,10 +13,14 @@
         </div>
         <div>
             <h1>Time period</h1>
-            <div>
-                <input class="size-slider" type="range" id="volume" name="volume"
-                       min="0" max="11">
-              </div>
+                <mat-slider
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1000"
+                step="1000"
+                min="0"
+                max="100000"
+                aria-label="units"></mat-slider>
         </div>
         <h1>Amount</h1>
         <mat-list fxLayout="row wrap"  fxFlexAlign="center">
@@ -33,9 +37,12 @@
     </form>
     <hr>
     <div>
-        <div fxLayout="row wrap">
-           
-        </div>
-        <app-history></app-history>
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Match History">         
+                <app-history></app-history>
+            </mat-tab>
+            <mat-tab label="My Account"> Content 2 </mat-tab>
+            <mat-tab label="Statistics"> Content 3 </mat-tab>
+          </mat-tab-group>
     </div>
 </div>

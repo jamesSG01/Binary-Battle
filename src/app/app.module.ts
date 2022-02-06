@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*  Import Angular Material */
+import {MatSliderModule} from '@angular/material/slider';
+import {MatTabsModule, MatTab} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'; 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
@@ -24,6 +26,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+//Components
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { GlobalHeaderComponent } from './shared/components/global-header/global-header.component';
 import { GlobalFooterComponent } from './shared/components/global-footer/global-footer.component';
@@ -63,6 +68,9 @@ import { ControlComponent } from './pages/battle/control/control.component';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTabsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())

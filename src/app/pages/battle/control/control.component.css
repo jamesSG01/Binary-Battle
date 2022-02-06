@@ -31,7 +31,9 @@ button {
     background-color: #18191e;
     margin: 10px;
 }
-
+mat-slider { 
+    width: 100%;
+}
 mat-list-item {
     margin: 5px;
     max-width: 100px;
