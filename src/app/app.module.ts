@@ -47,23 +47,6 @@ import { ControlComponent } from './pages/battle/control/control.component';
 import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
 
-//Services 
-import {UsersService} from './shared/services/users.service'
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyCAqPBq4oDDLu6QKOyhtDlPUtsWihgapwE",
-  authDomain: "binary-battle.firebaseapp.com",
-  projectId: "binary-battle",
-  storageBucket: "binary-battle.appspot.com",
-  messagingSenderId: "32076831341",
-  appId: "1:32076831341:web:8edf0a4d346ba7691bbd64",
-  measurementId: "G-QX44F3XG5M"
-};
-const firebaseApp = initializeApp(firebaseConfig);
-// Get a reference to the database service
-// const database = getDatabase(firebaseApp);
-// Get a reference to the storage service, which is used to create references in your storage bucket
-//const storage = getStorage(firebaseApp);
 
 @NgModule({
   declarations: [
@@ -106,7 +89,7 @@ const firebaseApp = initializeApp(firebaseConfig);
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage())
   ],
-  providers: [UsersService],
+  providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
