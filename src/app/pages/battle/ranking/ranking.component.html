@@ -1,12 +1,16 @@
   <table class="table table-dark table-hover" >
-    <tr>
-      <th>Ranking</th>
-      <th>User Name</th> 
-      <th>Points</th>
-    </tr>
-    <tr  *ngFor="let player of players">
-      <td>{{player.id}}</td>
-      <td>{{player.name}}</td>       
-      <td>{{player.point}}</td>       
+      <tr>
+        <th>Ranking</th>
+        <th>User Name</th> 
+        <th>Email</th>
+        <th>Points</th>
+        <th>Balance</th>
+      </tr>
+    <tr  *ngFor="let player of users">
+      <td>{{player.rank}}</td>
+      <td>{{player.nickname}}</td>
+      <td> {{player.email}}</td>
+      <td>{{player.points}}</td>       
+      <td>{{player.balance}}</td>       
     </tr>
   </table>
