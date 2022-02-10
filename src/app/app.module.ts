@@ -47,6 +47,8 @@ import { ControlComponent } from './pages/battle/control/control.component';
 import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
 
+//Services 
+import {UsersService} from './shared/services/users.service'
 // Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCAqPBq4oDDLu6QKOyhtDlPUtsWihgapwE",
@@ -61,7 +63,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 // Get a reference to the database service
 // const database = getDatabase(firebaseApp);
 // Get a reference to the storage service, which is used to create references in your storage bucket
-const storage = getStorage(firebaseApp);
+//const storage = getStorage(firebaseApp);
 
 @NgModule({
   declarations: [
@@ -104,7 +106,7 @@ const storage = getStorage(firebaseApp);
     provideAuth(() => getAuth()),
     provideStorage(() => getStorage())
   ],
-  providers: [],
+  providers: [UsersService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
