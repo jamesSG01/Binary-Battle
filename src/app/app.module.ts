@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/*Firebase  */
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
 /*  Import Angular Material */
 import {MatSliderModule} from '@angular/material/slider';
 import {MatTabsModule, MatTab} from '@angular/material/tabs';
@@ -16,12 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { BattleComponent } from './pages/battle/battle.component';
-import { HomeComponent } from './pages/home/home.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -36,6 +37,21 @@ import { PriceChartComponent } from './pages/battle/price-chart/price-chart.comp
 import { RankingComponent } from './pages/battle/ranking/ranking.component';
 import { HistoryComponent } from './pages/battle/history/history.component';
 import { ControlComponent } from './pages/battle/control/control.component';
+import { BattleComponent } from './pages/battle/battle.component';
+import { HomeComponent } from './pages/home/home.component';
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCAqPBq4oDDLu6QKOyhtDlPUtsWihgapwE",
+  authDomain: "binary-battle.firebaseapp.com",
+  projectId: "binary-battle",
+  storageBucket: "binary-battle.appspot.com",
+  messagingSenderId: "32076831341",
+  appId: "1:32076831341:web:8edf0a4d346ba7691bbd64",
+  measurementId: "G-QX44F3XG5M"
+};
+const app = initializeApp(firebaseConfig);
+
 @NgModule({
   declarations: [
     AppComponent,
