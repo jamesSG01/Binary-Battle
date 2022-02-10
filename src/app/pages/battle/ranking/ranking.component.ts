@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { User } from 'src/app/shared/models/users.model';
+import { UsersService } from 'src/app/shared/services/users.service';
+
 @Component({
   selector: 'app-ranking',
   templateUrl: './ranking.component.html',
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements OnInit {
-
-  constructor() { }
+  users: User[] = [];
+  constructor( private userService: UsersService ) { }
 
   ngOnInit(): void {
-    
+    this.userService.getUsers().subscribe((res: User[]) => {
+      this.users = res;
+    })
   }
   players = [
     { id:1, name: 'Dr Nice' , point:123},

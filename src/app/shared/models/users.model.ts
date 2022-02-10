@@ -1,4 +1,4 @@
-export interface users {
+export interface User {
     nickname: string,
     email:string,
     points: number;
