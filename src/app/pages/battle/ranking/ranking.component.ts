@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-ranking',
   templateUrl: './ranking.component.html',

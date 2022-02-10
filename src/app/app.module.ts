@@ -4,10 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-/*Firebase  */
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+/*Importing Firebase */
+import { provideFirebaseApp, initializeApp } 
+from '@angular/fire/app';
+import { getAuth, provideAuth } 
+from '@angular/fire/auth';
+import { getFirestore, provideFirestore } 
+from '@angular/fire/firestore';
+import { getStorage, provideStorage} 
+from '@angular/fire/storage';
+import { getDatabase } 
+from "firebase/database";
 
 /*  Import Angular Material */
 import {MatSliderModule} from '@angular/material/slider';
@@ -50,7 +57,11 @@ const firebaseConfig = {
   appId: "1:32076831341:web:8edf0a4d346ba7691bbd64",
   measurementId: "G-QX44F3XG5M"
 };
-const app = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
+// Get a reference to the database service
+// const database = getDatabase(firebaseApp);
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage(firebaseApp);
 
 @NgModule({
   declarations: [
@@ -87,9 +98,11 @@ const app = initializeApp(firebaseConfig);
     MatTabsModule,
     MatSliderModule,
     MatSlideToggleModule,
+    //Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    provideStorage(() => getStorage())
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
