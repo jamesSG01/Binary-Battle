@@ -1,30 +1,21 @@
 <app-global-header></app-global-header>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center start" > 
-        <div fxLayout="column">
-                <div class="container"  fxLayout="column">
-                        <div style="padding-top:20px">
-                                <h3>Realtime Chart</h3>
-                                <mat-slide-toggle>Pro Mode</mat-slide-toggle>
-                        </div>
-                        <hr>
-                        <div class="price-chart"> 
-                                <app-price-chart ></app-price-chart>
-                        </div>
-                        
-                </div>
-                <div class="container">   
-                        <div id="ranking-container" style="padding-top:20px" fxLayout="row" fxAlign="center">
-                                <h1> Leaderboard</h1>
-                                <button class="rank-btn"> All Time </button>
-                                <button class="rank-btn"> Past Month </button>                                <button class="rank-btn"> This Month </button>
-                                <button class="rank-btn"> Past Week </button>
-                        </div>
-                        <hr>
-                        <app-ranking></app-ranking>
-                </div>
 
+<div class="container-fluid d-flex flex-wrap flex-row justify-content-around"> 
+        <div id="frame-1" class="container flex-grow-1">
+                <app-price-chart dynamicHeight></app-price-chart>
+                <app-control ></app-control>
         </div>
-        <div  fxLayout="column"  fxFlexAlign="center">
-                    <app-control class="container"></app-control>
+        <div id="frame-2" class="container flex-grow-1">
+                <mat-tab-group dynamicHeight>
+                        <mat-tab label="My Account"> 
+                                <app-account></app-account>
+                        </mat-tab>
+                        <mat-tab label="Match History">         
+                                <app-history></app-history>
+                        </mat-tab>
+                        <mat-tab label="Statistics"> Content 3 </mat-tab>
+                </mat-tab-group>
+                <hr>
+                <app-ranking></app-ranking>
         </div>
 </div>

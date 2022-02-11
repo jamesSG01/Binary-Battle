@@ -1,50 +1,31 @@
-<div class="control-wrapper">
-    <form>
-        <div>
+
+<form>  
+        <!-- <div>
             <h1> Guess the Price & Win the Point </h1>
             <span> Battle against another player in 5 minutes session the win the price </span>
-        </div>
+        </div> -->
         <hr>
-        <div>
-            <h1>Time period</h1>
+        <div class="collapse"   >
+            <h1>Time period (Seconds)</h1>
                 <mat-slider style="margin-left: 15px;"
                 thumbLabel
                 [displayWith]="formatLabel"
-                tickInterval="1000"
-                step="1000"
+                tickInterval="30"
+                step="30"
                 min="0"
-                max="100000"
-                aria-label="units"></mat-slider>
+                max="180"
+                aria-label="units">seconds</mat-slider>
         </div>
-        <h1>Amount </h1>
-        
-        <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
+       
+        <!-- <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
             <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
             <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
             <mat-list-item> <button  mat-flat-button > 10 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 50 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
-        </mat-list>
-        <div style="margin: 15px; color: rgb(93, 94, 94);" fxLayout="column wrap"> 
-            <div style="margin-bottom: 5px;">
-                <span>Account Balance</span>
-                <span style="float: right; height: max-content;" class="account-balance"> 1,021 <i class="fab fa-gg-circle"></i></span>
-            </div>
-            <input mat-flat-button type="number" min="0" step="0.1" name="" placeholder="Custom Amount" class="position-size">          
-        </div>
+            <mat-list-item>  <input mat-flat-button type="number" min="0" step="0.1" name="" placeholder="Custom Amount" class="position-size"> </mat-list-item>
+        </mat-list> -->
 
-        <div fxLayout="row wrap"  fxFlexAlign="center" class="ls-btns">
-            <button mat-raised-button fxFlex="45%" id="long-btn">LONG</button>
-            <button mat-raised-button  fxFlex="45%" id="short-btn">SHORT</button>
+        <div style="margin-bottom:20px" class="d-flex justify-content-around">
+            <button mat-raised-button fxFlex="48%" id="long-btn"> <span><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> UP</button>
+            <button mat-raised-button  fxFlex="48%" id="short-btn"> <span class="down"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> DOWN</button>
         </div>
     </form>
-    <hr>
-    <div>
-        <mat-tab-group dynamicHeight>
-            <mat-tab label="Match History">         
-                <app-history></app-history>
-            </mat-tab>
-            <mat-tab label="My Account"> Content 2 </mat-tab>
-            <mat-tab label="Statistics"> Content 3 </mat-tab>
-          </mat-tab-group>
-    </div>
-</div>

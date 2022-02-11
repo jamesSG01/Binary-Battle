@@ -17,6 +17,7 @@ import { getDatabase }
 from "firebase/database";
 
 /*  Import Angular Material */
+import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatTabsModule, MatTab} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -46,6 +47,10 @@ import { HistoryComponent } from './pages/battle/history/history.component';
 import { ControlComponent } from './pages/battle/control/control.component';
 import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
+import { StatsComponent } from './pages/battle/stats/stats.component';
+import { AccountComponent } from './pages/battle/account/account.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -60,6 +65,8 @@ import { HomeComponent } from './pages/home/home.component';
     RankingComponent,
     HistoryComponent,
     ControlComponent,
+    StatsComponent,
+    AccountComponent,
   ],
   imports: [
     CommonModule,
@@ -83,6 +90,9 @@ import { HomeComponent } from './pages/home/home.component';
     MatTabsModule,
     MatSliderModule,
     MatSlideToggleModule,
+    MatExpansionModule,
+    MatTooltipModule,
+    MatStepperModule,
     //Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
