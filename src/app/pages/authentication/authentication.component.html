@@ -1,5 +1,12 @@
 <app-global-header></app-global-header>
-<div class="container" [ngClass]="isActive==true?'right-panel-active':''" id="container">
+
+
+<form #data="ngForm" (ngSubmit)="register(data)">
+    <input matInput formControlName="email" type="text" required />
+    <input matInput formControlName="password" type="password" required />
+	<button type="submit" > Submit </button>
+</form>
+<!-- <div class="container" [ngClass]="isActive==true?'right-panel-active':''" id="container">
 	<div class="form-container sign-up-container">
 		<form action="#">
 			<h1>Create Account</h1>
@@ -44,4 +51,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

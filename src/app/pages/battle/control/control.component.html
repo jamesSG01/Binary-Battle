@@ -6,18 +6,17 @@
         </div>
         <hr>
         <div>
-            <h1>Time period</h1>
+            <h1>Time period (Seconds)</h1>
                 <mat-slider style="margin-left: 15px;"
                 thumbLabel
                 [displayWith]="formatLabel"
-                tickInterval="1000"
-                step="1000"
+                tickInterval="30"
+                step="30"
                 min="0"
-                max="100000"
-                aria-label="units"></mat-slider>
+                max="180"
+                aria-label="units">seconds</mat-slider>
         </div>
         <h1>Amount </h1>
-        
         <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
             <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
             <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>

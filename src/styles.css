@@ -1,15 +1,13 @@
 @import url('http://fonts.cdnfonts.com/css/alliance-no1');
 body{
+    width: 100%;
     margin: 0%;
     background-color: #000000;
     background-image: url(./assets/chart-background.png) ;
     background-repeat: repeat-x;
     color: rgb(105, 105, 105);
 }
-html{
-    max-width: 100vw;
-    overflow: hidden;
-}
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
