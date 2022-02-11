@@ -23,7 +23,7 @@ export class AuthService {
   user$: Observable<User>;
 
 
-  constructor(private auth: Auth, private afAuth:AngularFireAuth, private afs: AngularFirestore, private router: Router){
+  constructor(private auth: Auth,  private router: Router){
     // // Get the auth state, then fetch the Firestore user document or return null
     // this.user$ = this.afAuth.authState.pipe(
     //   switchMap(user => {
@@ -47,8 +47,5 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
   /* Sign out */
-  async logout() {
-    await this.afAuth.signOut();
-    this.router.navigate(['/']);
-  }
+ 
 }
