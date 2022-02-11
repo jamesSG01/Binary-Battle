@@ -13,14 +13,13 @@ import { Auth,
 export class AuthService {
   constructor(private auth: Auth) {}
   /* Sign up */
-  register({ email, password }: LoginData) {
+  register(email:string, password:string) {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }
   /* Sign in */
-  login({ email, password }: LoginData) {
+  login(email:string, password:string) {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
-  
   /* Sign out */
   logout() {
     return signOut(this.auth);
