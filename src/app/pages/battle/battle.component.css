@@ -23,15 +23,18 @@ div[id*='frame'] {
     margin: 5px; 
 }
 #frame-1 {
-    min-width: 70vw;
+    min-width: 40vw;
+    width: 100%;
     box-shadow: -2px 0px 29px 0px #272675;
-
 }
 #frame-2 {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     min-width: fit-content;
-    width:fit-content;
+    width:100px;
     display:block;
     box-shadow: -2px 0px 29px 0px #272675;
+}
+app-price-chart {
+    border-radius: 20px;
 }
