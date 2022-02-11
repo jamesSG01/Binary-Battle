@@ -23,10 +23,8 @@ export class AuthenticationComponent implements OnInit {
   };
   login(data):void{
     this.authService.login(data.email,data.password);
-    alert(data.email+' | '+data.password);
   }
   register(data):void {
     this.authService.register(data.email,data.password);
-    alert(data.email+' | '+data.password);
   }
 }

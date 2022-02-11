@@ -28,7 +28,6 @@ button {
 
 .layer1 {
     background-color: #18191e;
-    margin: 10px;
 }
 mat-slider { 
     width: 100%;
@@ -44,56 +43,46 @@ mat-list-item {
     
 }
 mat-list-item button {
-    min-width: 80px;
-    border: #5d5966 1px solid;
-    border-radius: 10px;
-    background: rgba(240, 248, 255,0.05);
-    backdrop-filter: blur(10px);
+    min-width: 100px;
+    height: 35px;
+    background-color:rgb(16, 17, 21);
+    border: 1px solid rgb(29, 30, 35);
+    border-radius: 5rem;
 }
 mat-list-item button:hover {
-    background-image: linear-gradient(to left, rgba(143, 111, 218,0.8), rgba(228, 131, 192,0.8));
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    transition-duration: 0.4s;
-    backdrop-filter: blur(5px);
+    border-radius: 5rem;
+    color: rgb(147, 141, 255);
+    border-color: rgb(33, 32, 57);
+    background-color: rgb(33, 32, 57);
 }
 
-mat-card { 
-    width: 100%;
-}
 
-.ls-btns button {
-    font-size: 1.5rem;
-    font-family: monospace;
-    height: 50px;
-    margin: 5px;
-
+#long-btn, #short-btn {
+    font-size: 2rem;
+    height: 60px;
+    display:block;
+    border-radius: 5px;
 }
 
 button,input{
     color: aliceblue;
 }
-form {
-    margin: 25px;
-}
-.control-wrapper {
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: #18191e;
-}
 
 #long-btn {
-    border: solid cadetblue 1px;
-    background-image: linear-gradient(18.6deg, rgb(106, 73, 190) 19%, rgb(34, 168, 137) 91.7%)}
+    background-image: linear-gradient(315deg, #1f1f1f 0%, #568045 74%);
+    border: 1px solid rgb(82, 82, 82);
+    color: rgb(202, 202, 202);
+}
 #long-btn:hover {
-    border: solid rgb(79, 213, 218) 2px;
 }  
 #short-btn{ 
-    border: solid rgb(160, 95, 95) 1px;
-    background-image: linear-gradient(100deg, rgb(214, 55, 77) 19%, rgb(70, 50, 158) 91.7%)
+    background-color: #000000;  
+    background-image: linear-gradient(115deg, #242424 0%, #514772 74%);
+    border: 1px solid rgb(82, 82, 82);
+    color: rgb(202, 202, 202);
 }
 #short-btn:hover {
-    border: solid rgb(247, 95, 49) 2px;
+    
 }
 .u-btn {
     background: none;
@@ -108,7 +97,6 @@ form {
     width: 100%;
 }
 .u-btn:active::after {
-    content: "";
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -116,4 +104,11 @@ form {
     height: 4px;
     background-color: rgb(147, 141, 255);
     border-radius: 1rem
+}
+mat-stepper{
+    background:none;
+}
+.down {
+    display: inline-block;
+    transform: rotate(180deg); 
 }

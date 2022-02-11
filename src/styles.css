@@ -1,16 +1,8 @@
 @import url('http://fonts.cdnfonts.com/css/alliance-no1');
 body{
-    width: 100%;
     margin: 0%;
     background-color: #000000;
-    background-image: url(./assets/chart-background.png) ;
-    background-repeat: repeat-x;
+    background-image: linear-gradient(147deg, #000000 0%, #12111f 74%);    background-repeat: repeat-x;
     color: rgb(105, 105, 105);
-}
-
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    word-break: keep-all;
+    min-height:100vh;
 }

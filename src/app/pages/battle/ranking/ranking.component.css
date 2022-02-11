@@ -1,5 +1,8 @@
+*{
+    color: rgb(215, 220, 224);
+    font-family: 'Archivo', sans-serif;
+}
 table { 
-    width: 100%;
     margin: 15px;
 }
 table, th,tr,td {
@@ -14,4 +17,22 @@ tr:hover {
 div[class*='ranking-wrapper'] {
     border-radius: 15px;
     overflow: hidden;
+}
+
+
+.rank-btn {
+    min-width: 100px;
+    height: 35px;
+    background-color:rgb(16, 17, 21);
+    border: 1px solid rgb(29, 30, 35);
+    border-radius: 5rem;
+}
+.rank-btn:active{
+    border-radius: 5rem;
+    color: rgb(147, 141, 255);
+    border-color: rgb(33, 32, 57);
+    background-color: rgb(33, 32, 57);
+} 
+#ranking-container > * { 
+    margin-left: 15px;
 }
