@@ -70,8 +70,8 @@ html {
               transform: scale(1) translateX(0);
     }
     100% {
-      -webkit-transform: scale(1.2) translateX(-360px) translateY(-80px);
-              transform: scale(1.2) translateX(-360px) translateY(-80px);
+      -webkit-transform: scale(1.2) translateX(-60px) translateY(-80px);
+              transform: scale(1.2) translateX(-60px) translateY(-80px);
     }
   }
   
@@ -81,8 +81,8 @@ html {
               transform: scale(1) translateX(0) translateY(0);
     }
     100% {
-      -webkit-transform: scale(1.2) translateX(-360px) translateY(-80px);
-              transform: scale(1.2) translateX(-360px) translateY(-80px);
+      -webkit-transform: scale(1.2) translateX(-60px) translateY(-80px);
+              transform: scale(1.2) translateX(-60px) translateY(-80px);
     }
   }
   
