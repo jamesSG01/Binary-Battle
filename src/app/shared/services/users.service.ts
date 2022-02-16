@@ -18,6 +18,11 @@ export class UsersService {
     const usersRef = collection(this.firestore, 'users');
     return collectionData(usersRef) as Observable<User[]>;
   }
+  getUserByUID(uid:string):  Observable<User> {
+    // Create a storage reference from our storage service
+    const usersRef = doc(this.firestore, 'users/'+uid);
+    return docData(usersRef) as Observable<User>;
+  }
   addUser(){
     const usersRef = collection(this.firestore, 'users');
     addDoc(usersRef,{nickname:'test'} );
