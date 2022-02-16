@@ -18,4 +18,9 @@ export class UsersService {
     const usersRef = collection(this.firestore, 'users');
     return collectionData(usersRef) as Observable<User[]>;
   }
+  addUser(){
+    const usersRef = collection(this.firestore, 'users');
+    addDoc(usersRef,{nickname:'test'} );
+    console.log('Running !')
+  }
 }
