@@ -16,4 +16,7 @@ export class RankingComponent implements OnInit {
       this.users = res;
     })
   }
+  addUser() {
+    this.userService.addUser();
+  }
 }

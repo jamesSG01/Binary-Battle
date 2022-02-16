@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 export class AuthenticationComponent implements OnInit {
   //declaring 
   isActive:boolean = false;
+  username:string;
   email: string;
   password: string;
   constructor(private authService: AuthService){  }
@@ -25,6 +26,7 @@ export class AuthenticationComponent implements OnInit {
     this.authService.login(data.email,data.password);
   }
   register(data):void {
-    this.authService.register(data.email,data.password);
+    console.log(data.username);
+    this.authService.register(data.username, data.email,data.password);
   }
 }
