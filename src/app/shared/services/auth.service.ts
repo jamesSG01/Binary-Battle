@@ -47,9 +47,7 @@
       // ..
     });
   }
-  getCurrentUID():string{
-    return this.auth.currentUser.uid;
-  }
+
   /* Sign in */
   login(email:string, password:string) {
     return signInWithEmailAndPassword(this.auth, email, password);
