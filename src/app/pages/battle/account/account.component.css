@@ -175,24 +175,13 @@ html {
     width: 40px;
   }
   
+
+  
+
   .body-stats {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    float: left;
-    margin: -14px 0  0 30px;
-    position: relative;
-    text-transform: uppercase;
-    width: 20%;
-    background:none
+    display: inline;
+    margin: 10px;
   }
-  
-  .body-stats > span {
-    display: inline-block;
-    font-weight: 900;
-    margin-top: 8px;
-  }
-  
   .body-info {
     clear: left;
     position: relative;
@@ -213,15 +202,7 @@ html {
     text-align: center;
   }
   
-  .body-more span {
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-    display: inline-block;
-    height: 6px;
-    margin-right: 2px;
-    width: 6px;
-  }
+
   
   .card {
     background: #fff;

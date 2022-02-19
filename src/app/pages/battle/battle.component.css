@@ -21,16 +21,17 @@ div[id*='frame'] {
     background-color: rgba(77, 77, 77, 0.02);
     backdrop-filter: blur(5px);
     margin: 5px; 
+    resize: both;
 }
 #frame-1 {
     min-width: 40vw;
-    width: 100%;
+    width: 60%;
     box-shadow: -2px 0px 29px 0px #272675;
 }
 #frame-2 {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    min-width: fit-content;
+    min-width: min-content;
     width:100px;
     display:block;
     box-shadow: -2px 0px 29px 0px #272675;

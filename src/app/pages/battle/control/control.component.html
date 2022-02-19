@@ -16,7 +16,47 @@
                 max="180"
                 aria-label="units">seconds</mat-slider>
         </div>
-       
+        <mat-stepper dynamicHeight>
+            <mat-step label="Game duration:current_value" state="phone">
+                    <!-- <button mat-flat-button> - </button> -->
+                    <mat-slider style="height: 70px; width:70%; display: block; margin-left: 15px;"
+                        thumbLabel
+                        [displayWith]="formatLabel"
+                        tickInterval="30"
+                        step="30"
+                        min="0"
+                        max="180"
+                        aria-label="units">seconds</mat-slider>
+                        <!-- <button mat-flat-button> - </button> -->                
+            </mat-step>
+            <mat-step label="Threshold:current_value" state="chat" fx>
+                <mat-form-field appearance="fill" floatLabel="always" fxLayout="row wrap"  fxFlexAlign="center">
+                    <mat-label>Thresh Hold (%) </mat-label>
+                    <input matInput type="number" name="timer" step="15" id="timer" placeholder="1%">
+                    <span matSuffix>%</span>
+                </mat-form-field>
+            </mat-step>
+            <mat-step label="Stake: :current_value">
+                <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
+                    <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
+                    <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
+                    <mat-list-item> <button  mat-flat-button > 10 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
+                    <mat-list-item>  
+                        <input matInput type="number" name="timer" step="1" id="stake" placeholder="100 "> 
+                        <span matSuffix><i class="fab fa-gg-circle"></i> </span>
+                    </mat-list-item>
+                </mat-list>
+                
+            </mat-step>
+          
+            <!-- Icon overrides. -->
+            <ng-template matStepperIcon="phone">
+              <mat-icon>call_end</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="chat">
+                <mat-icon>compare_arrows</mat-icon>
+            </ng-template>
+          </mat-stepper>
         <!-- <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
             <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
             <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
