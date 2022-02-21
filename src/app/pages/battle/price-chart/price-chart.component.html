@@ -1,7 +1,7 @@
 
 <div>
-    <mat-slide-toggle style="margin:10px" [checked]="setProMode();">
-        Pro Mode
+    <mat-slide-toggle style="margin:10px" [(ngModel)]="proMode">
+        Pro Mode {{proMode}}
     </mat-slide-toggle>
     <mat-icon 
         style="color: rgb(65, 65, 65); font-size:1.3rem; margin-top:10px"
@@ -16,9 +16,11 @@
 </div>
     <i style="display:block; position:absolute; right: 25px; top: 25px;" class="fas fa-bell"></i>
 <hr>
-<div  class="pro-mode" id="tradingview_11397"></div>
-<div [hidden]="hideBTC" class="pro-mode" id="tradingview_ce365" style="height:60vh"></div>
-<div [hidden]="hideETH" class="pro-mode" id="tradingview_adef8" style="height:60vh"></div>
+<div  [hidden]="proMode" id="tradingview_11397"></div>
+<div [hidden]="!proMode">
+    <div [hidden]="hideBTC" class="pro-mode" id="tradingview_ce365" style="height:60vh"></div>
+    <div [hidden]="hideETH" class="pro-mode" id="tradingview_adef8" style="height:60vh"></div>
+</div>
 <span> Price 1</span>
 <span style="float:right"> Price 2</span>
 <div id="game-tracker-container" class="container-fluid d-flex flex-wrap flex-row justify-content-center align-items-center">
