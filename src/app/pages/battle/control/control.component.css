@@ -1,7 +1,3 @@
-mat-list { 
-    display: flex;
-    align-items: center;
-}
 
 .position-size{
     height: 50px;
@@ -25,36 +21,74 @@ button {
     background: none;
 }
 
+.wrapper {
+    margin: 25px;
+}
+::ng-deep .mat-radio-button,
+::ng-deep .mat-radio-button .mat-radio-label{
+  width:100%;
+}    
 
+::ng-deep .mat-radio-button .mat-radio-container {
+  width: 0;
+}
+::ng-deep .mat-radio-container .mat-radio-outer-circle,
+::ng-deep .mat-radio-container .mat-radio-inner-circle {
+  border: none;
+  width: 0;
+}
+    :host ::ng-deep .mat-radio-button .mat-radio-ripple{
+        display: none;
+}
+mat-form-field {
+    display:none !important;
+}
+#stake-input {
+    text-align: center;
+    display: block;
+    width:40%;
+    min-width: 200px;
+    height: 45px;
+    background-color:rgb(16, 17, 21);
+    border: 1px solid rgb(29, 30, 35);
+    border-radius: 5rem;
+}#match-input {
+    text-align: center;
+    display: block;
+    width:70%;
+    min-width: 200px;
+    height: 45px;
+    background-color:rgb(16, 17, 21);
+    border: 1px solid rgb(29, 30, 35);
+    border-radius: 5rem;
+}
+ .mat-button-focus-overlay {
+   background-color:transparent !important;
+  }
+input:focus {
+    border-radius: 5rem;
+    color: rgb(147, 141, 255);
+    border-color: rgb(33, 32, 57);
+    background-color: rgb(33, 32, 57);
+    outline:none !important;
+} 
+.mat-radio-button {
+    width: 60px;;
+    padding: 10px;
+    
+    border-radius: 25rem;
+    color: rgb(147, 141, 255);
+    border: 1px solid;
+    border-color: rgb(105, 104, 136);
+    background-color: rgb(33, 32, 57);
+}
 .layer1 {
     background-color: #18191e;
 }
 mat-slider { 
     width: 100%;
 }
-mat-list-item {
-    margin: 5px;
-    max-width: 100px;
-    width: 100px;
-    height: 50px;
-    border-radius: 25px;
-    overflow: hidden;
-    border: none;
-    
-}
-mat-list-item button {
-    min-width: 100px;
-    height: 35px;
-    background-color:rgb(16, 17, 21);
-    border: 1px solid rgb(29, 30, 35);
-    border-radius: 5rem;
-}
-mat-list-item button:hover {
-    border-radius: 5rem;
-    color: rgb(147, 141, 255);
-    border-color: rgb(33, 32, 57);
-    background-color: rgb(33, 32, 57);
-}
+
 
 #long-btn, #short-btn {
     font-size: 2rem;
@@ -111,3 +145,7 @@ mat-stepper{
     display: inline-block;
     transform: rotate(180deg); 
 }
+
+
+
+/*test */

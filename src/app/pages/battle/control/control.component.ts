@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-control',
@@ -7,26 +6,37 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./control.component.css']
 })
 export class ControlComponent implements OnInit {
-  isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-
-  constructor(private _formBuilder: FormBuilder) { }
-
+  stakeOpt: number[] = [5, 10, 25, 50];
+  boundOpt: number[] = [0.1,0.5,1];
+  stakeAmount:number = 5;
+  matchDuration:number = 15;
+  step = 0;
+  bound:number = 0.5;
   ngOnInit(): void {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
-    });
+    
   }
-  formatLabel(value: number) {
-    if (value >= 1000) {
-      return Math.round(value / 1000) + 'k';
-    }
+  minus(){
+    this.stakeAmount--;
+  } 
+  add(){
+    this.stakeAmount++;
+  }minusMatch(){
+    if(this.matchDuration >=30)
+      this.matchDuration-= 15;
+  } 
+  addMatch(){
+    if(this.matchDuration <60)
+      this.matchDuration+=15;
+  }
+  setStep(index: number) {
+    this.step = index;
+  }
 
-    return value;
+  nextStep() {
+    this.step++;
   }
-  
+
+  prevStep() {
+    this.step--;
+  }
 }
