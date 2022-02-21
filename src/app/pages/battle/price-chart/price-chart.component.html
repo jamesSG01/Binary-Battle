@@ -1,17 +1,22 @@
 
 <div>
-    <mat-slide-toggle style="margin:10px">Pro Mode</mat-slide-toggle>
+    <mat-slide-toggle style="margin:10px" [checked]="setProMode();">
+        Pro Mode
+    </mat-slide-toggle>
     <mat-icon 
         style="color: rgb(65, 65, 65); font-size:1.3rem; margin-top:10px"
         matTooltip="Price Char: You can observe market from here"
         aria-label="Button that displays a tooltip when focused or hovered over">
         help
     </mat-icon>
-    <button class="pro-mode" mat-button (click)="show('BTC');"> BTC-USD </button>
-    <button class="pro-mode" mat-button (click)="show('ETH');"> ETH-USD </button>
+    <div [hidden]="!proMode">
+        <button  mat-button (click)="show('BTC');"> BTC-USD </button>
+        <button  mat-button (click)="show('ETH');"> ETH-USD </button>
+    </div>
 </div>
     <i style="display:block; position:absolute; right: 25px; top: 25px;" class="fas fa-bell"></i>
 <hr>
+<div  class="pro-mode" id="tradingview_11397"></div>
 <div [hidden]="hideBTC" class="pro-mode" id="tradingview_ce365" style="height:60vh"></div>
 <div [hidden]="hideETH" class="pro-mode" id="tradingview_adef8" style="height:60vh"></div>
 <span> Price 1</span>
