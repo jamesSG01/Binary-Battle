@@ -38,6 +38,7 @@
                     [(ngModel)]="bound" [ngModelOptions]="{ standalone: true }">
                         <mat-radio-button  disableRipple="true" *ngFor="let opt of boundOpt" [value]="opt" >
                             {{opt}}
+                            <span matSuffix>%</span>
                         </mat-radio-button>    
                     </mat-radio-group>     
             </mat-step>

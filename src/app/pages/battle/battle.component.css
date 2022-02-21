@@ -22,8 +22,7 @@ div[id*='frame'] {
     margin: 5px; 
 }
 #frame-1 {
-    min-width: 40vw;
-    width: 60%;
+    width: 100%;
     box-shadow: -2px 0px 29px 0px #272675;
 }
 #frame-2 {
