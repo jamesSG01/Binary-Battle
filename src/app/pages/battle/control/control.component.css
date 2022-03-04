@@ -106,17 +106,14 @@ button,input{
     border: 1px solid rgb(82, 82, 82);
     color: rgb(202, 202, 202);
 }
-#long-btn:hover {
-}  
+
 #short-btn{ 
     background-color: #000000;  
     background-image: linear-gradient(115deg, #242424 0%, #514772 74%);
     border: 1px solid rgb(82, 82, 82);
     color: rgb(202, 202, 202);
 }
-#short-btn:hover {
-    
-}
+
 .u-btn {
     background: none;
     border: none;

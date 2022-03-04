@@ -52,6 +52,7 @@ import { AccountComponent } from './pages/battle/account/account.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
+import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome-modal.component';
 
 
 @NgModule({
@@ -68,6 +69,7 @@ import {MatRadioModule} from '@angular/material/radio';
     ControlComponent,
     StatsComponent,
     AccountComponent,
+    WelcomeModalComponent,
   ],
   imports: [
     CommonModule,

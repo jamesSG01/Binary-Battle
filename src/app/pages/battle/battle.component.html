@@ -1,11 +1,11 @@
 <app-global-header></app-global-header>
 
-<div class="container-fluid d-flex flex-wrap flex-row justify-content-around"> 
-        <div id="frame-1" class="container flex-grow-1">
+<div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
+        <div id="frame-1" class="container-fluid flex-grow-1">
                 <app-price-chart dynamicHeight></app-price-chart>
                 <app-control ></app-control>
         </div>
-        <div id="frame-2" class="container flex-grow-1">
+        <div id="frame-2" class="container">
                 <mat-tab-group dynamicHeight>
                         <mat-tab label="My Account"> 
                                 <app-account></app-account>

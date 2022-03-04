@@ -1,27 +1,33 @@
 
 <div>
+ 
     <mat-slide-toggle style="margin:10px" [(ngModel)]="proMode">
-        Pro Mode {{proMode}}
+        Pro Mode 
     </mat-slide-toggle>
-    <mat-icon 
-        style="color: rgb(65, 65, 65); font-size:1.3rem; margin-top:10px"
-        matTooltip="Price Char: You can observe market from here"
-        aria-label="Button that displays a tooltip when focused or hovered over">
-        help
-    </mat-icon>
     <div [hidden]="!proMode">
         <button  mat-button (click)="show('BTC');"> BTC-USD </button>
-        <button  mat-button (click)="show('ETH');"> ETH-USD </button>
+        <button  mat-button (click)="show('CAD');"> CAD-USD </button>
+        <button  mat-button (click)="show('XAU');"> XAU-USD </button>
+        <button  mat-button (click)="show('SPY');"> SPY-USD </button>
     </div>
+    <mat-icon 
+    style="color: rgb(65, 65, 65); font-size:1.3rem; margin-top:10px"
+    matTooltip="Price Char: You can observe market from here"
+    style="display:block; position:absolute; right: 25px; top: 5px;"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    help
+</mat-icon>
 </div>
-    <i style="display:block; position:absolute; right: 25px; top: 25px;" class="fas fa-bell"></i>
 <hr>
 <div  [hidden]="proMode" id="tradingview_11397"></div>
+
 <div [hidden]="!proMode">
     <div [hidden]="hideBTC" class="pro-mode" id="tradingview_ce365" style="height:60vh"></div>
-    <div [hidden]="hideETH" class="pro-mode" id="tradingview_adef8" style="height:60vh"></div>
+    <div [hidden]="hideCAD" class="pro-mode" id="tradingview_a4527" style="height:60vh"></div>
+    <div [hidden]="hideSPY" class="pro-mode" id="tradingview_4c981" style="height:60vh"></div>
+    <div [hidden]="hideXAU" class="pro-mode" id="tradingview_34a83" style="height:60vh"></div>
 </div>
-<span> Price 1</span>
+<!-- <span> Price 1</span>
 <span style="float:right"> Price 2</span>
 <div id="game-tracker-container" class="container-fluid d-flex flex-wrap flex-row justify-content-center align-items-center">
     <div id="image1" class="cropcircle"> </div>
@@ -35,4 +41,4 @@
     <div id="image2" class="cropcircle"></div>
 </div>
 <span> user_id</span>
-<span style="float:right"> ROBOT-05</span>
+<span style="float:right"> ROBOT-05</span> -->
