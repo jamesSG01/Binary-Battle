@@ -1,6 +1,7 @@
 {
   "name": "binary-battle",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "main.ts",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
