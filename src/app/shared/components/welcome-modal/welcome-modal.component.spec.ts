@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PriceChartComponent } from './price-chart.component';
+import { WelcomeModalComponent } from './welcome-modal.component';
 
-describe('PriceChartComponent', () => {
-  let component: PriceChartComponent;
-  let fixture: ComponentFixture<PriceChartComponent>;
+describe('WelcomeModalComponent', () => {
+  let component: WelcomeModalComponent;
+  let fixture: ComponentFixture<WelcomeModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PriceChartComponent ]
+      declarations: [ WelcomeModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PriceChartComponent);
+    fixture = TestBed.createComponent(WelcomeModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,31 +1,83 @@
 
-<form>  
-        <!-- <div>
-            <h1> Guess the Price & Win the Point </h1>
-            <span> Battle against another player in 5 minutes session the win the price </span>
-        </div> -->
-        <hr>
-        <div class="collapse"   >
-            <h1>Time period (Seconds)</h1>
-                <mat-slider style="margin-left: 15px;"
-                thumbLabel
-                [displayWith]="formatLabel"
-                tickInterval="30"
-                step="30"
-                min="0"
-                max="180"
-                aria-label="units">seconds</mat-slider>
-        </div>
-       
-        <!-- <mat-list  fxLayout="row wrap"  fxFlexAlign="center">
-            <mat-list-item> <button  mat-flat-button > 1 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 5 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
-            <mat-list-item> <button  mat-flat-button > 10 <i class="fab fa-gg-circle"></i> </button> </mat-list-item>
-            <mat-list-item>  <input mat-flat-button type="number" min="0" step="0.1" name="" placeholder="Custom Amount" class="position-size"> </mat-list-item>
-        </mat-list> -->
 
+     
+        <mat-stepper>
+            <mat-step label="Match Duration:{{matchDuration}} seconds" state="phone">
+                <div class="wrapper d-flex justify-content-center">
+                    <div id="match-input" class="d-flex justify-content-center">
+                        <button 
+                          mat-button 
+                          mat-icon-button 
+                          matPrefix 
+                          (click) ="minusMatch();"
+                          aria-label="Remove" >
+                          <mat-icon>remove</mat-icon>
+                        </button>
+                        <input matInput type="number" [(ngModel)]="matchDuration" step="15" name="matchDuration" autocomplete="off"/>
+                        <button 
+                            (click)="addMatch();"
+                          mat-button 
+                          mat-icon-button 
+                          matSuffix
+                          aria-label="Add" >
+                          <mat-icon>add</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Threshold:{{bound}} %">
+                <div class="wrapper">
+                    <mat-form-field  id="match-input">
+                        <input matInput type="number" [(ngModel)]="bound" step="0.1" name="bound" autocomplete="off"/>
+                        <span matSuffix>%</span>
+                    </mat-form-field>
+                </div>
+                <mat-radio-group 
+                    aria-labelledby="example-radio-group-label"
+                    class="d-flex justify-content-evenly"
+                    [(ngModel)]="bound" [ngModelOptions]="{ standalone: true }">
+                        <mat-radio-button  disableRipple="true" *ngFor="let opt of boundOpt" [value]="opt" >
+                            {{opt}}
+                            <span matSuffix>%</span>
+                        </mat-radio-button>    
+                    </mat-radio-group>     
+            </mat-step>
+            <mat-step label="Stake: {{stakeAmount}}" >
+                <div class="wrapper" >
+                    <mat-radio-group 
+                    aria-labelledby="example-radio-group-label"
+                    class="d-flex justify-content-evenly"
+                    [(ngModel)]="stakeAmount" [ngModelOptions]="{ standalone: true }">
+                        <mat-radio-button  disableRipple="true" *ngFor="let stake of stakeOpt" [value]="stake" >
+                            {{stake}}
+                        </mat-radio-button>    
+                    </mat-radio-group>     
+                </div>
+                <div class="d-flex justify-content-center">
+
+                <div id="stake-input" class="d-flex justify-content-center">
+                        <button 
+                          mat-button 
+                          mat-icon-button 
+                          matPrefix 
+                          (click) ="minus();"
+                          aria-label="Remove" >
+                          <mat-icon>remove</mat-icon>
+                        </button>
+                        <input matInput type="number" [(ngModel)]="stakeAmount" step="1" name="stakeAmount" autocomplete="off"/>
+                        <button 
+                            (click)="add();"
+                          mat-button 
+                          mat-icon-button 
+                          matSuffix
+                          aria-label="Add" >
+                          <mat-icon>add</mat-icon>
+                        </button>
+                </div>
+                </div>
+            </mat-step>
+          </mat-stepper>
         <div style="margin-bottom:20px" class="d-flex justify-content-around">
             <button mat-raised-button fxFlex="48%" id="long-btn"> <span><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> UP</button>
             <button mat-raised-button  fxFlex="48%" id="short-btn"> <span class="down"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> DOWN</button>
         </div>
-    </form>

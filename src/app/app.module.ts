@@ -51,6 +51,8 @@ import { StatsComponent } from './pages/battle/stats/stats.component';
 import { AccountComponent } from './pages/battle/account/account.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatRadioModule} from '@angular/material/radio';
+import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome-modal.component';
 
 
 @NgModule({
@@ -67,6 +69,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     ControlComponent,
     StatsComponent,
     AccountComponent,
+    WelcomeModalComponent,
   ],
   imports: [
     CommonModule,
@@ -93,6 +96,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatExpansionModule,
     MatTooltipModule,
     MatStepperModule,
+    MatRadioModule,
     //Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),

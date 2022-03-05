@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './global-header.component.html',
   styleUrls: ['./global-header.component.css']
 })
+
 export class GlobalHeaderComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
