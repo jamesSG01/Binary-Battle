@@ -1,0 +1,9 @@
+#exampleModal {
+    background-color: rgba(77, 77, 77, 0.02);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: rgb(197, 205, 228);
+
+}
