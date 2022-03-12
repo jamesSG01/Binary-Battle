@@ -1,9 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 @Component({
   selector: 'app-control',
   templateUrl: './control.component.html',
-  styleUrls: ['./control.component.css']
+  styleUrls: ['./control.component.css'],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {displayDefaultIndicatorType: false},
+    },
+  ]
 })
 export class ControlComponent implements OnInit {
   stakeOpt: number[] = [5, 10, 25, 50];
