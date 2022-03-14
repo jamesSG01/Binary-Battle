@@ -56,6 +56,13 @@ import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome
 
 import {NgbModule, NgbPopover} from '@ng-bootstrap/ng-bootstrap';
 
+
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+export function playerFactory() {
+  return player;
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +80,7 @@ import {NgbModule, NgbPopover} from '@ng-bootstrap/ng-bootstrap';
     WelcomeModalComponent,
   ],
   imports: [
+    LottieModule.forRoot({ player: playerFactory }),
     CommonModule,
     BrowserModule,
     AppRoutingModule,

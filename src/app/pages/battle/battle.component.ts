@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BattleComponent implements OnInit {
   b1 = false;b2 = false;b3 = false;b4 = false;b5 = false;b6 = false; 
+  congrats = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -50,6 +51,12 @@ export class BattleComponent implements OnInit {
          break; 
       } 
    } 
+  }
+  congr(){
+    this.congrats = true; 
+    type Timer = ReturnType<typeof setTimeout>
+    const timer: Timer = setTimeout(() => {    this.congrats = false; 
+    }, 15000)
   }
 
 }

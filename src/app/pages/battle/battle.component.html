@@ -1,5 +1,4 @@
 <app-global-header></app-global-header>
-
 <div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
         <div  [ngClass]="{'highlight':b1}" id="frame-1" class="container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p="ngbPopover" [ngbPopover]="popContent" popoverTitle="Trading Tab">
                 <app-price-chart   [ngClass]="{'highlight':b2}" dynamicHeight [autoClose]="false"  triggers="manual" #p2="ngbPopover" [ngbPopover]="popContent2" popoverTitle="Price Chart"></app-price-chart>
@@ -7,8 +6,10 @@
         </div>
         <div [ngClass]="{'highlight':b4}" id="frame-2" class="container container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p4="ngbPopover" [ngbPopover]="popContent4" popoverTitle="Profile Tab">
                 <mat-tab-group [ngClass]="{'highlight':b5}" dynamicHeight  [autoClose]="false"  triggers="manual" #p5="ngbPopover" [ngbPopover]="popContent5" popoverTitle="Account">
+
                         <mat-tab label="My Account"> 
                                 <app-account></app-account>
+                                <lottie-player [ngClass]="{'congrats':congrats}" src="https://assets3.lottiefiles.com/packages/lf20_u4yrau.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
                         </mat-tab>
                         <mat-tab label="Match History">         
                                 <app-history></app-history>
@@ -103,6 +104,7 @@
         <div>
                 <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 6/6 </h5>
 
-                <button (click)="p6.close(); hl(0);" mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(231, 231, 231); color: #161616; float: right; font-weight: bold;"> Done</button>
+                <button  (click)="p6.close(); hl(0); congr()" mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(231, 231, 231); color: #161616; float: right; font-weight: bold;"> Done</button>
         </div>
 </ng-template>
+

@@ -44,3 +44,13 @@ app-price-chart {
     border-radius: 15px;
     outline: 3px solid rgb(240, 185, 11) !important;    
 }
+#animation, svg, lottie-player {
+    position: absolute !important;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+}
+.congrats { 
+    display: block;
+}

@@ -22,6 +22,7 @@ div[class*='ranking-wrapper'] {
 
 .rank-btn {
     min-width: 100px;
+    margin-left: 5px;
     height: 35px;
     background-color:rgb(16, 17, 21);
     border: 1px solid rgb(29, 30, 35);
