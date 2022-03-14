@@ -10,8 +10,7 @@ export class BattleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  
-   
+    
     let button = document.getElementById('show-guide');
     button.click();
 

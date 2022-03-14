@@ -1,32 +1,28 @@
 
   
   <!-- Modal -->
-  <div class="modal fade show"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
-    <div class="modal-dialog d-flex justify-content-center">
-      <div class="modal-content" style="min-width: 50vw; ">
+  <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog d-flex justify-content-center" >
+      <div class="modal-content" style="min-width: 50vw;  border: rgb(71, 71, 71) 1px solid; border-radius: 15px;" > 
         <div class="modal-header" style="border: none;" >
-        
         </div>
+        <h1 style=" text-align: center; color:#d5d67b; font-weight:bold;">
+          Welcome to BinaryBattle
+        </h1>
         <button style="background: none; box-shadow: none;  right: 5px; position: absolute; " mat-mini-fab data-bs-dismiss="modal">
-            <mat-icon>close</mat-icon>
+            <mat-icon style="color: #eef069;" id="close-btn">close</mat-icon>
         </button>
-        <div class="modal-body  d-flex justify-content-center">
-            <img style="width: 70%;" src="../../../../assets/489.png">
-
+        <div class="modal-body  d-flex justify-content-center" style="border">
+          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/_Gyk1ryaf4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div style="width: 70%; align-self: center;">
-            <p style="font-size: 1.5rem; line-height: 1; color: rgb(46, 46, 46);">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+            <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </p>
         </div>
-        <button mat-flat-button color="acent" type="button" style="width: 300px; height: 70px; font-size: 1.5rem; align-self: center;" >Lets go !</button>
+        <button mat-raised-button color="acent" type="button" style="width:300px; height: 70px; border: rgb(85, 85, 85) solid 1.5px; border-radius: 10px; font-size: 1.5rem; align-self: center; background-color: rgb(108, 119, 155);" >Show me !</button>
 
-        <div class="modal-footer" style="border: none;" style="align-self: center; height: 100px;">
-            <button style="background: none; box-shadow: none;" mat-button data-bs-dismiss="modal" style="color: rgb(46, 46, 46);"> I already have experience </button>
+        <div class="modal-footer" style="border: none; " style="align-self: center; height: 100px;">
+            <button style="background: none; box-shadow: none;" mat-button data-bs-dismiss="modal" style="color: rgb(128, 128, 128);" id="go-btn"> I already have experience </button>
         </div>
       </div>
     </div>
   </div>
-
-  <script defer>
-    document.getElementById('show-guide').click();
-        alert("function: show guide ! ")
-  </script>
