@@ -18,8 +18,20 @@ body{
 }
 .popover {
     background-color: rgb(240, 185, 11);
-}
-.popover-.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::after, .bs-popover-end>.popover-arrow::after  {
 
-    border-right-color: rgb(240, 185, 11);;
+}
+.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::after, .bs-popover-end>.popover-arrow::after{
+
+    border-right-color: rgb(240, 185, 11);
+}
+
+.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after, .bs-popover-bottom>.popover-arrow::after{
+
+    border-bottom-color: rgb(240, 185, 11);
+}
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::after, .bs-popover-top>.popover-arrow::after {
+    border-top-color: rgb(240, 185, 11);
+}
+.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after, .bs-popover-start>.popover-arrow::after {
+    border-left-color: rgb(240, 185, 11);
 }
