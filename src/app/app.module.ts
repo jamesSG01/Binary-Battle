@@ -54,6 +54,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
 import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome-modal.component';
 
+import {NgbModule, NgbPopover} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome
     MatTooltipModule,
     MatStepperModule,
     MatRadioModule,
+    NgbModule, //boostrap
     //Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
@@ -105,6 +107,6 @@ import { WelcomeModalComponent } from './shared/components/welcome-modal/welcome
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,NgbPopover]
 })
 export class AppModule { }

@@ -11,5 +11,10 @@ export class WelcomeModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  startGuide(){
+    let close = document.getElementById('close-btn');
+    let button = document.getElementById('start-guide');
+    close.click();
+    button.click();
+  }
 }

@@ -1,7 +1,7 @@
 <app-global-header></app-global-header>
 
 <div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
-        <div id="frame-1" class="container-fluid flex-grow-1">
+        <div id="frame-1" class="container-fluid flex-grow-1" [autoClose]="false" triggers="manual" #p="ngbPopover" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. <div>I am familiar with this no guidance is needed. Skip</div>" popoverTitle="Popover on right">
                 <app-price-chart dynamicHeight></app-price-chart>
                 <app-control ></app-control>
         </div>
@@ -17,11 +17,9 @@
                 </mat-tab-group>
                 <hr>
                 <app-ranking></app-ranking>
-                <button type="button" class="btn btn-outline-secondary me-2" placement="top"
-                ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on top">
-          Popover on top
-        </button>        </div>
+        </div>
 </div>
 <app-welcome-modal></app-welcome-modal>
+<button id="start-guide" style="display: none;" (click)="p.open()"> </button>
 
 
