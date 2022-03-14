@@ -11,7 +11,11 @@ app-account{
     box-shadow: 4px -2px 34px 1px #000 inset;
     background-color: black;
 }
+app-price-chart {
+    display: block;
+}
 app-control  {
+    display: block;
     background:rgba(24, 25, 30,0.5);
 }
 div[id*='frame'] {
@@ -36,3 +40,7 @@ app-price-chart {
     border-radius: 20px;
 }
 
+[class*="highlight"], .highlight {
+    border-radius: 15px;
+    outline: 3px solid rgb(240, 185, 11) !important;    
+}

@@ -1,12 +1,12 @@
 <app-global-header></app-global-header>
 
 <div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
-        <div id="frame-1" class="container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p="ngbPopover" [ngbPopover]="popContent" popoverTitle="Trading Tab">
-                <app-price-chart dynamicHeight [autoClose]="false"  triggers="manual" #p2="ngbPopover" [ngbPopover]="popContent2" popoverTitle="Price Chart"></app-price-chart>
-                <app-control [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" popoverTitle="Terminal"></app-control>
+        <div  [ngClass]="{'highlight':b1}" id="frame-1" class="container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p="ngbPopover" [ngbPopover]="popContent" popoverTitle="Trading Tab">
+                <app-price-chart   [ngClass]="{'highlight':b2}" dynamicHeight [autoClose]="false"  triggers="manual" #p2="ngbPopover" [ngbPopover]="popContent2" popoverTitle="Price Chart"></app-price-chart>
+                <app-control [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" popoverTitle="Terminal"></app-control>
         </div>
-        <div id="frame-2" class="container" class="container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p4="ngbPopover" [ngbPopover]="popContent4" popoverTitle="Profile Tab">
-                <mat-tab-group dynamicHeight  [autoClose]="false"  triggers="manual" #p5="ngbPopover" [ngbPopover]="popContent5" popoverTitle="Account">
+        <div [ngClass]="{'highlight':b4}" id="frame-2" class="container container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p4="ngbPopover" [ngbPopover]="popContent4" popoverTitle="Profile Tab">
+                <mat-tab-group [ngClass]="{'highlight':b5}" dynamicHeight  [autoClose]="false"  triggers="manual" #p5="ngbPopover" [ngbPopover]="popContent5" popoverTitle="Account">
                         <mat-tab label="My Account"> 
                                 <app-account></app-account>
                         </mat-tab>
@@ -16,71 +16,80 @@
                         <mat-tab label="Statistics"> Content 3 </mat-tab>
                 </mat-tab-group>
                 <hr>
-                <app-ranking  [autoClose]="false"  triggers="manual" #p6="ngbPopover" [ngbPopover]="popContent6" popoverTitle="Ranking"></app-ranking>
+                <app-ranking [ngClass]="{'highlight':b6}" style="display: block; margin: 5px;" [autoClose]="false"  triggers="manual" #p6="ngbPopover" [ngbPopover]="popContent6" popoverTitle="Ranking"></app-ranking>
         </div>
 </div>
 <app-welcome-modal></app-welcome-modal>
-<button id="start-guide" style="display: none;" (click)="p.open()"> </button>
+<button id="start-guide" style="display: none;" (click)="p.open(); hl(1)"> </button>
 
 
 <ng-template #popContent>
         <p style="color:rgb(27, 27, 27)">
                 Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
         </p>
-        <button (click)="p.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
+        <button (click)="p.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <button (click)="p.close(); p2.open()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Next</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 1/6 </h5>
+                <button (click)="p.close(); p2.open(); ; hl(2)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> NEXT</button>
         </div>
 </ng-template>
 <ng-template #popContent2>
         <p style="color:rgb(27, 27, 27)">
                 Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
         </p>
-        <button (click)="p2.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
+        <button (click)="p2.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <button (click)="p2.close(); p3.open()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Next</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 2/6 </h5>
+
+                <button (click)="p2.close(); p3.open(); hl(3)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> NEXT</button>
         </div>
 </ng-template>
 <ng-template #popContent3>
         <p style="color:rgb(27, 27, 27)">
                 Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
         </p>
-        <button (click)="p3.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
+        <button (click)="p3.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <button (click)="p3.close(); p4.open()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Next</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 3/6 </h5>
+
+                <button (click)="p3.close(); p4.open(); hl(4)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> NEXT</button>
         </div>
 </ng-template>
 <ng-template #popContent4>
         <p style="color:rgb(27, 27, 27)">
                 Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
         </p>
-        <button (click)="p4.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
+        <button (click)="p4.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <button (click)="p4.close(); p5.open()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Next</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 4/6 </h5>
+
+                <button (click)="p4.close(); p5.open(); hl(5)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> NEXT</button>
         </div>
 </ng-template>
 <ng-template #popContent5>
         <p style="color:rgb(27, 27, 27)">
                 Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
         </p>
-        <button (click)="p5.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
+        <button (click)="p5.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <button (click)="p5.close(); p6.open()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Next</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 5/6 </h5>
+
+                <button (click)="p5.close(); p6.open(); hl(6)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> NEXT</button>
         </div>
 </ng-template>
 <ng-template #popContent6>
@@ -92,6 +101,8 @@
         </button> 
 
         <div>
-                <button (click)="p6.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; float: right;"> Done</button>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 6/6 </h5>
+
+                <button (click)="p6.close(); hl(0);" mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(231, 231, 231); color: #161616; float: right; font-weight: bold;"> Done</button>
         </div>
 </ng-template>

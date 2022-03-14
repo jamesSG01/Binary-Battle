@@ -35,3 +35,6 @@ body{
 .bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after, .bs-popover-start>.popover-arrow::after {
     border-left-color: rgb(240, 185, 11);
 }
+ngb-popover-window {
+    z-index: 10000 !important;
+}

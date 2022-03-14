@@ -1,10 +1,10 @@
 #exampleModal {
-    background-color: rgba(197, 197, 197, 0.02);
+    background-color: rgba(51, 51, 51, 0.02);
     backdrop-filter: blur(10px);
 }
 
 .modal-content {
-    background: rgb(36, 36, 36);
+    background: rgb(27, 27, 27);
 }
 
 .modal-footer {
