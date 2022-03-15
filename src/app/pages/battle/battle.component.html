@@ -1,8 +1,8 @@
 <app-global-header></app-global-header>
 <div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
         <div  [ngClass]="{'highlight':b1}" id="frame-1" class="container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p="ngbPopover" [ngbPopover]="popContent" popoverTitle="Trading Tab">
-                <app-price-chart   [ngClass]="{'highlight':b2}" dynamicHeight [autoClose]="false"  triggers="manual" #p2="ngbPopover" [ngbPopover]="popContent2" popoverTitle="Price Chart"></app-price-chart>
-                <app-control [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" popoverTitle="Terminal"></app-control>
+                <app-price-chart   [ngClass]="{'highlight':b2}" dynamicHeight [autoClose]="false"  triggers="manual" #p2="ngbPopover" placement="bottom" [ngbPopover]="popContent2" popoverTitle="Price Chart"></app-price-chart>
+                <app-control [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" placement="top" popoverTitle="Terminal"></app-control>
         </div>
         <div [ngClass]="{'highlight':b4}" id="frame-2" class="container container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p4="ngbPopover" [ngbPopover]="popContent4" popoverTitle="Profile Tab">
                 <mat-tab-group [ngClass]="{'highlight':b5}" dynamicHeight  [autoClose]="false"  triggers="manual" #p5="ngbPopover" [ngbPopover]="popContent5" popoverTitle="Account">

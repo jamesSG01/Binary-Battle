@@ -43,6 +43,7 @@ app-price-chart {
 [class*="highlight"], .highlight {
     border-radius: 15px;
     border: 3px solid rgb(240, 185, 11) !important; 
+    overflow: visible;   
 }
 #animation, svg, lottie-player {
     position: absolute !important;

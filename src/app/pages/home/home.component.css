@@ -61,3 +61,50 @@ h1 {
   @keyframes expand {
     50% { word-spacing: 15px; }
   }
+
+
+  [class*="bet"] {
+    --border-width: 4px;
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+     width: 270px;
+     height: 50px;
+     border-radius: 25rem;
+     color: rgb(49, 49, 49);
+     font-weight: bolder;
+     border: rgb(49, 49, 49) 3px solid;
+     font-size: 1.3rem;
+     background: rgb(87, 245, 184);
+     transition: transform 0.3s ease-in-out; /* Animation */
+
+}
+[class*="bet"]:hover{
+    background: rgba(34, 34, 34,0.8);
+    color: rgb(53, 53, 53);
+    -webkit-transform: scale(0.93);
+    transform: scale(0.93);
+}
+
+[class*="bet"]:hover:after {
+    border: rgb(53, 53, 53) 3px solid;
+    position: absolute;
+    background: rgba(34, 34, 34,0.8);
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #abf25f, #5ff281, #5ff2f0);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 25rem;
+    animation: moveGradient 4s alternate infinite;
+}
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+   }
+}

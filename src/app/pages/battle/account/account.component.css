@@ -250,3 +250,35 @@
   .card-list li:first-child {
     margin-left: 0;
   }
+
+
+
+  [class*="launch"] {
+    --border-width: 3px;
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+   width: 200px;
+   height: 50px;
+     border-radius: 25rem;
+	 color: rgb(27, 27, 27);
+     background: #5ff29c;
+}
+
+
+[class*="launch"]:hover:after {
+    position: absolute;
+    background: #222;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 25rem;
+    animation: moveGradient 4s alternate infinite;
+}
