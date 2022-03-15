@@ -3,7 +3,12 @@
     color: cornsilk;
 }
 span {
-    font-size: larger;
+    font-size: 0.5rem;
+    margin-top: 50px !important;
+}
+#slogan {
+  margin-top: 200px;
+  margin-bottom: 0px;  
 }
 h1,h2,h4,h5{
     font-family: 'Syne', sans-serif;
@@ -38,3 +43,21 @@ mat-card {
     margin: 100px;
     font-size: 2em;
 } 
+
+h1 {
+    animation-name: grow-shrink, expand;
+    animation-duration: 8s, 5s, 5s;
+    animation-iteration-count: 1;
+    font-family: 'Syne', sans-serif;
+    text-align: center;
+  }
+  
+ 
+  
+  @keyframes grow-shrink {
+    50% { transform: scale(1.2); }
+  }
+  
+  @keyframes expand {
+    50% { word-spacing: 15px; }
+  }

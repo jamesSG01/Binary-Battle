@@ -47,18 +47,22 @@ mat-form-field {
     text-align: center;
     display: block;
     width:40%;
+    font-weight: bold;
+    font-size: 1.1rem;
     min-width: 200px;
     height: 45px;
-    background-color:rgb(16, 17, 21);
+    background-color: rgb(33, 32, 57);
     border: 1px solid rgb(29, 30, 35);
     border-radius: 5rem;
 }#match-input {
     text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
     display: block;
     width:70%;
     min-width: 200px;
     height: 45px;
-    background-color:rgb(16, 17, 21);
+    background-color: rgb(33, 32, 57);
     border: 1px solid rgb(29, 30, 35);
     border-radius: 5rem;
 }
@@ -73,15 +77,44 @@ input:focus {
     outline:none !important;
 } 
 .mat-radio-button {
-    width: 60px;;
+    width: 70px;
     padding: 10px;
-    
     border-radius: 25rem;
-    color: rgb(147, 141, 255);
-    border: 1px solid;
-    border-color: rgb(105, 104, 136);
-    background-color: rgb(33, 32, 57);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid rgb(168, 173, 241);
+    background-color: rgb(147, 141, 255);
+    color: rgb(194, 194, 194);
+    transition: transform 0.5s; /* Animation */
 }
+.mat-radio-button:hover {
+    border: 2px solid rgb(168, 173, 241);
+    background-color: rgb(114, 112, 172);
+    color: rgb(170, 172, 201);
+    -webkit-transform: scale(0.93);
+	        transform: scale(0.93);
+}
+[class*="bet"] {
+    border: 2px solid #86ac99 !important;
+    color: rgb(186, 227, 235);
+    background-color: #4fb180 !important;
+}
+[class*="bet"]:hover {
+    border: 2px solid #9ac2af !important;
+    background-color: #3c8560 !important;
+    color: rgb(223, 224, 235);
+    -webkit-transform: scale(0.93);
+	        transform: scale(0.93);
+}
+[class*="bet-container"]:hover::after {
+    background: linear-gradient(60deg, #5f86f2, #4fb180, #b5e780, #1f1f1f);
+    border: rgb(69, 137, 177) 3px solid;
+    background: none;
+    animation: moveGradient 4s alternate infinite;
+}
+
+
+
 .layer1 {
     background-color: #18191e;
 }
@@ -96,7 +129,10 @@ mat-slider {
     display:block;
     border-radius: 5px;
 }
+#long-btn:hover {
+    background-image: linear-gradient(315deg, #1f1f1f 0%, #88e763 74%);
 
+}
 button,input{
     color: aliceblue;
 }
@@ -146,3 +182,53 @@ mat-stepper{
 
 
 /*test */
+.gradient-border {
+    --border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--border-width);
+}
+#long-btn:hover::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #4fb180, #b5e780, #1f1f1f);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    border: rgb(69, 137, 177) 2px solid;
+    animation: moveGradient 4s alternate infinite;
+}
+#short-btn:hover::after{
+    position: absolute;
+    content: "";
+    border: rgb(147, 141, 255) 2px solid;
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #1f1f1f);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+}
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+   }
+}

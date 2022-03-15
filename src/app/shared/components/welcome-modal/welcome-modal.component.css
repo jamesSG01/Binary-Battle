@@ -1,10 +1,10 @@
 #exampleModal {
-    background-color: rgba(51, 51, 51, 0.02);
+    background-color: rgba(199, 197, 197, 0.07);
     backdrop-filter: blur(10px);
 }
 
 .modal-content {
-    background: rgb(27, 27, 27);
+    background: rgb(20, 20, 20);
 }
 
 .modal-footer {
@@ -12,4 +12,4 @@
 }
 
 #close-btn:hover { color: #989968 !important;  }
-#go-btn:hover { background-color: #606d75; }
+#go-btn:hover { background-color: #b4da6e !important; border: #8efa5d 2px solid !important; color: rgb(70, 70, 70) !important;}
