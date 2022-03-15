@@ -28,8 +28,9 @@ export class PriceChartComponent implements OnInit {
       "style": "1",
       "locale": "en",
       "toolbar_bg": "#f1f3f6",
+      "hide_side_toolbar": false,
       "enable_publishing": false,
-      "hide_top_toolbar": true,
+      "hide_top_toolbar": false,
       "hide_legend": true,
       "save_image": false,
       "container_id": "tradingview_ce365"
@@ -85,6 +86,7 @@ export class PriceChartComponent implements OnInit {
       "timezone": "Etc/UTC",
       "theme": "dark",
       "style": "1",
+      "hide_side_toolbar": false,
       "locale": "en",
       "toolbar_bg": "#f1f3f6",
       "enable_publishing": false,
@@ -101,6 +103,8 @@ export class PriceChartComponent implements OnInit {
       "timezone": "Etc/UTC",
       "theme": "dark",
       "style": "1",
+      "hide_side_toolbar": false,
+
       "locale": "en",
       "toolbar_bg": "#f1f3f6",
       "enable_publishing": false,
@@ -117,6 +121,8 @@ export class PriceChartComponent implements OnInit {
       "timezone": "Etc/UTC",
       "theme": "dark",
       "style": "1",
+      "hide_side_toolbar": false,
+
       "locale": "en",
       "toolbar_bg": "#f1f3f6",
       "enable_publishing": false,

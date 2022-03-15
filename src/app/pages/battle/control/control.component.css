@@ -78,41 +78,22 @@ input:focus {
 } 
 .mat-radio-button {
     width: 70px;
-    padding: 10px;
+    height: 40px;
     border-radius: 25rem;
     font-size: 1.1rem;
     font-weight: bold;
     border: 2px solid rgb(168, 173, 241);
     background-color: rgb(147, 141, 255);
-    color: rgb(194, 194, 194);
-    transition: transform 0.5s; /* Animation */
+    color: rgb(223, 221, 221);
+    transition: transform 0.3s ease-in-out; /* Animation */
 }
 .mat-radio-button:hover {
-    border: 2px solid rgb(168, 173, 241);
+    border: 3px solid rgb(197, 201, 255);
     background-color: rgb(114, 112, 172);
-    color: rgb(170, 172, 201);
+    color: rgb(203, 205, 224);
     -webkit-transform: scale(0.93);
 	        transform: scale(0.93);
 }
-[class*="bet"] {
-    border: 2px solid #86ac99 !important;
-    color: rgb(186, 227, 235);
-    background-color: #4fb180 !important;
-}
-[class*="bet"]:hover {
-    border: 2px solid #9ac2af !important;
-    background-color: #3c8560 !important;
-    color: rgb(223, 224, 235);
-    -webkit-transform: scale(0.93);
-	        transform: scale(0.93);
-}
-[class*="bet-container"]:hover::after {
-    background: linear-gradient(60deg, #5f86f2, #4fb180, #b5e780, #1f1f1f);
-    border: rgb(69, 137, 177) 3px solid;
-    background: none;
-    animation: moveGradient 4s alternate infinite;
-}
-
 
 
 .layer1 {
@@ -128,6 +109,7 @@ mat-slider {
     height: 60px;
     display:block;
     border-radius: 5px;
+    min-width: 270px;
 }
 #long-btn:hover {
     background-image: linear-gradient(315deg, #1f1f1f 0%, #88e763 74%);
@@ -231,4 +213,33 @@ mat-stepper{
     50% {
         background-position: 100% 50%;
    }
+}
+[class*="bet"] {
+    --border-width: 3px;
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 70px;
+     padding: 10px;
+     border-radius: 25rem;
+	 color: rgb(27, 27, 27);
+     background: #5ff29c;
+}
+
+
+[class*="bet"]:hover:after {
+    position: absolute;
+    background: #222;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 25rem;
+    animation: moveGradient 4s alternate infinite;
 }
