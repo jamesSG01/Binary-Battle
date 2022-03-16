@@ -52,8 +52,21 @@ app-price-chart {
     z-index: 1000;
     display: none;
 }
-.congrats { 
+.congrats,.go_ani { 
     display: block;
+}
+
+#go_ani {
+    background-color: rgba(0, 0, 0,0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    align-self: center;
+    position: absolute !important; 
+    width: 100%!important;
+    height: 500px!important; 
+    top: 150px;
+    text-align: center;
+    align-content: center;
 }
 
 
