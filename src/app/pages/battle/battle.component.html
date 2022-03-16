@@ -6,17 +6,11 @@
                         <div id="game-tracker-container" class="container-fluid d-flex flex-wrap flex-row justify-content-center align-items-center">
                         <div id="image1" class="cropcircle"> </div>
                         <div id="image2" class="cropcircle"> </div>
-                        <div class="progress">
-                                <mat-progress-bar class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:0%" aria-valuenow="cp" aria-valuemin="0" aria-valuemax="100"></mat-progress-bar>
+                        <mat-progress-bar style="width: 100%;" mode="determinate" [value]="cprogress"></mat-progress-bar>
+                        <h5 style="position: absolute; margin-top: 10px; display:block; align-self: center; font-weight:500; "> NOW: ${{cp}}</h5>
                         </div>
-                        <h1 data-heading="Vs" id="vs-text">vs</h1>
-                        <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:100%" aria-valuenow="cp" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        </div>
-                        <span> {{lose}}</span>
-                        <span style="float:right"> {{win}}</span>
+                        <span style="left: 15px; margin-top: 10px; font-weight: bold; position: absolute;">  You Lose <br><span style=" color:#cf8df5"> ${{lose}} </span> </span>
+                        <span style="right:15px; margin-top: 10px; font-weight: bold;position: absolute; text-align:right;"> You Win  <br>      <span style="  color:#a6f069"> ${{win}} </span></span>
                 </div>
                 <app-control [hidden]="game_state" [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" placement="top" popoverTitle="Terminal"></app-control>
         </div>

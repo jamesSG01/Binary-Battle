@@ -17,6 +17,7 @@ import { getDatabase }
 from "firebase/database";
 
 /*  Import Angular Material */
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatTabsModule, MatTab} from '@angular/material/tabs';
@@ -106,6 +107,7 @@ export function playerFactory() {
     MatTooltipModule,
     MatStepperModule,
     MatRadioModule,
+    MatProgressBarModule,
     NgbModule, //boostrap
     //Firebase
     provideFirebaseApp(() => initializeApp(environment.firebase)),

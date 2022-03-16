@@ -13,7 +13,7 @@ export class BattleComponent implements OnInit {
   congrats = false;
   dataStream: WebSocketSubject<any> = webSocket('wss://ws.finnhub.io?token=c83rosiad3ide9hecq4g');
   cp: any;
-  cprogress: any;
+  cprogress: number = 50;
   win: any; 
   lose: any; 
   mid: any;
@@ -48,7 +48,7 @@ export class BattleComponent implements OnInit {
     this.mid = this.cp;
     this.cprogress=  Math.round( ( (this.cp - this.lose) / (this.win - this.lose) * 100 )*100)/100;
     console.log('Game started at price:'+this.cp)
-    this.counter = 10;// game is 60s 
+    this.counter = 15;// game is 60s 
     const interval  = setInterval(() => {
       this.counter--;
       this.dataStream.asObservable().subscribe((data:any) => {
@@ -70,6 +70,7 @@ export class BattleComponent implements OnInit {
       if (this.counter <=0) {
         if(this.cp >= this.mid){
           console.log('You Won!');
+          this.congr();
           this.points+= 150;
         } else {
           console.log('You Lost!');

@@ -84,25 +84,25 @@ app-price-chart {
 }
 
 .cropcircle{
+    z-index: 99;
     width: 50px;
     height: 50px;
     border-radius: 100%;
     background: rgba(238, 238, 238,0.3) no-repeat center;
-    opacity: 0.78;
     background-size: cover;
     box-shadow: -8px 0px 17px 1px #000;
 
   }
   #image1{
     border: 2px solid rgb(53, 53, 53);
-
+    z-index: 100;
     position:absolute;
     left:10px;
     background-image: url(https://inspgr.id/app/uploads/2020/11/illustration-christian-liquid-feature.jpg);
 }
 #image2{
     border: 2px solid rgb(53, 53, 53);
-
+    z-index: 100;
     position:absolute;
     right:10px;
     background-image: url(https://images.unsplash.com/photo-1589254066213-a0c9dc853511?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
@@ -114,36 +114,18 @@ app-price-chart {
     border-radius: 35px;
 }
 
-.progress-bar {
-    background: -webkit-linear-gradient(right, #412466 0%,#4535d1 100%); /* Chrome10-25,Safari5.1-6 */
-    border-radius: 0px;
-}
-.progress {
-    width: 50%;
-    height:50px;
-    border-radius: 0px;
-    background-color: rgba(34, 34, 34, 0.5);
+::ng-deep .mat-progress-bar-fill::after {
+    background: -webkit-linear-gradient(right, #415197 0%,#5bdd62 100%); /* Chrome10-25,Safari5.1-6 */
+    border-radius: 30px;
 }
 
-
-#vs-text {
-    font-size: 3rem;
-    line-height: 1;
-    display: block;
-    position:absolute;
-    margin-top: 10px;
-    position: absolute;
-    color: rgb(45, 45, 45); 
-    letter-spacing: -0.8rem;
-}
-#vs-text:before { 
-    content: attr(data-heading);
-    position: absolute;
-    color: rgb(57, 231, 159);
+mat-progress-bar  {
+    height:40px;
+    border-radius: 25px;
     width: 100%;
-    z-index: 5;
-    text-shadow: none;
-    left: 27%;
-    text-align: left;
-    animation: flicker 3s linear infinite;
+}
+
+
+::ng-deep .mat-progress-bar-buffer {
+    background-color: rgb(24, 24, 24);
 }
