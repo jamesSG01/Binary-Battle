@@ -34,7 +34,6 @@
   .container {
     box-shadow: 0 0 50px rgba(0,0,0,.3);
     margin: 10px auto;
-    overflow: hidden;
     width: 360px;
   }
   
@@ -180,7 +179,6 @@
     clear: left;
     position: relative;
     max-height: 100px;
-    overflow: hidden;
     transition: all 600ms ease-out;
   }
   

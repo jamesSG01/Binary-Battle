@@ -58,5 +58,6 @@ export class BattleComponent implements OnInit {
     const timer: Timer = setTimeout(() => {    this.congrats = false; 
     }, 15000)
   }
+  
 
 }

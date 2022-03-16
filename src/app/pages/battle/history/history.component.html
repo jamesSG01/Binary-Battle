@@ -1,22 +1,25 @@
 <div class="wrapper-history">
   
-  <table class="table table-dark table-hover" id="printarea">
-    <tr>
-      <th>Result</th>
-      <th>PnL</th>
-      <th>Points</th>
-
-    </tr>
-    <tr  *ngFor="let game of games">
-      <td><div *ngIf="game.res; then thenBlock else elseBlock"></div>
-        <ng-template #thenBlock>Won.</ng-template>
-        <ng-template #elseBlock>Lost</ng-template> {{game.date}} </td>
-      <td>{{game.pnl}} Coins</td>
-      <td>{{game.pnlPoint}} </td>
-    </tr>
+  <table >
+    <thead style="position: sticky; top: 0px;">
+      <tr>
+        <th>Result</th>
+        <th>PnL</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr  *ngFor="let game of games">
+          <td><div *ngIf="game.res; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>Won.</ng-template>
+            <ng-template #elseBlock>Lost</ng-template> {{game.date}} </td>
+          <td>{{game.pnl}} Coins</td>
+          <td>{{game.pnlPoint}} </td>
+        </tr>
+      </tbody>
   </table>
   <mat-icon 
-  style="display: block; position: absolute; right: 5px; bottom: 5px;color: rgb(65, 65, 65);"
+  style="display: block; position: absolute; right: 5px; bottom: 5px;color: rgb(65, 65, 65); background: none;"
         matTooltip="Match History: Everything about games you played will be here"
         aria-label="Button that displays a tooltip when focused or hovered over">
         help

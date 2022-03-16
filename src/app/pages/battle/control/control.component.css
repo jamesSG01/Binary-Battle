@@ -95,6 +95,10 @@ input:focus {
 	        transform: scale(0.93);
 }
 
+.description {
+    width: 70%;
+    min-width: 200px;
+}
 
 .layer1 {
     background-color: #18191e;

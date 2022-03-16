@@ -8,21 +8,23 @@
   <button class="rank-btn"> Past Week </button>
 </div>
 <hr>
-<table class="table table-dark table-hover" >
-      <tr>
-        <th>Ranking</th>
-        <th>User Name</th> 
-        <th>Email</th>
-        <th>Points</th>
-        <th>Balance</th>
-      </tr>
+<table  >
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>UID</th> 
+      <th>Email</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr  *ngFor="let player of users">
       <td>{{player.rank}}</td>
       <td>{{player.nickname}}</td>
       <td> {{player.email}}</td>
       <td>{{player.points}}</td>       
-      <td>{{player.balance}}</td>       
     </tr>
+  </tbody>
 </table>
 
 <mat-icon 
