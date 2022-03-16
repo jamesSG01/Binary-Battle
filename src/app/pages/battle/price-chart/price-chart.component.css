@@ -60,15 +60,3 @@ h1:before {
     text-align: left;
     animation: flicker 3s linear infinite;
 }
-
-/* * Webfont: CoreCircus by S-Core * URL: http://www.myfonts.com/fonts/s-core/core-circus/regular/ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved. * Licensed pageviews: 10,000 * * Webfont: CoreCircus2DDot1 by S-Core * URL: http://www.myfonts.com/fonts/s-core/core-circus/dot1/ * Copyright: Copyright (c) 2013 by S-Core Co., Ltd.. All rights reserved. * Licensed pageviews: 10,000 */
-@font-face {
-    font-family: 'CoreCircus2DDot1';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot');
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_1_0.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'CoreCircus';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
-}
