@@ -1,107 +1,112 @@
 
 
-     
-        <mat-stepper>
-             <!-- Icon overrides. -->
-             <ng-template matStepperIcon="timer">
-                <mat-icon>timer</mat-icon>
-            </ng-template>
-            <ng-template matStepperIcon="border_horizontal">
-                <mat-icon>border_horizontal</mat-icon>
-            </ng-template>
-            <ng-template matStepperIcon="monetization_on">
-                <mat-icon>monetization_on   </mat-icon>
-            </ng-template>
-            <mat-step label="Match Duration:{{matchDuration}} seconds" state="timer">
-                <div class="description">
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                </div>
-                <div class="wrapper d-flex justify-content-center">
-                    <div id="match-input" class="d-flex justify-content-center">
-                        <button 
-                          mat-button 
-                          mat-icon-button 
-                          matPrefix 
-                          (click) ="minusMatch();"
-                          aria-label="Remove" >
-                          <mat-icon>navigate_before</mat-icon>
-                        </button>
-                        <div style="width: 100%; display: block;" class="d-flex justify-content-center">
-                            <input style="width: 50px !important; display: block;" matInput type="number" [(ngModel)]="matchDuration" step="15" max="60" name="matchDuration" autocomplete="off"/>
-                            <span class="input-group-addon" style="margin-top:11px; width: 50px; color:rgb(85,83,115); font-weight: 600;">seconds</span>
-                        </div>
-                        <button 
-                            (click)="addMatch();"
-                          mat-button 
-                          mat-icon-button 
-                          matSuffix
-                          aria-label="Add" >
-                          <mat-icon>navigate_next</mat-icon>
-                        </button>
-                    </div>
-                </div>
-            </mat-step>
-            <mat-step label="Threshold:{{bound}} %" state="border_horizontal">
-                <div class="description">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                </div>
-                <div class="wrapper">
-                    <mat-form-field  id="match-input">
-                        <input matInput type="number" [(ngModel)]="bound" step="0.1" name="bound" autocomplete="off"/>
-                        <span matSuffix>%</span>
-                    </mat-form-field>
-                </div>
-                <mat-radio-group 
-                    aria-labelledby="example-radio-group-label"
-                    class="d-flex justify-content-evenly"
-                    [(ngModel)]="bound" [ngModelOptions]="{ standalone: true }">
-                        <mat-radio-button  class="d-flex justify-content-center" disableRipple="true" *ngFor="let opt of boundOpt" [value]="opt" >
-                            {{opt}}
-                            <span matSuffix>%</span>
-                        </mat-radio-button>    
-                    </mat-radio-group>     
-            </mat-step>
-            <mat-step label="Stake: {{stakeAmount}}"  state="monetization_on">
-                <div class="description">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                </div>
-                <div class="wrapper" >
-                    <mat-radio-group 
-                    aria-labelledby="example-radio-group-label"
-                    class="d-flex justify-content-evenly"
-                    [(ngModel)]="stakeAmount" [ngModelOptions]="{ standalone: true }">
-                            <mat-radio-button style="border: none !important; background-color: none!important; background: none!important;" disableRipple="true" *ngFor="let stake of stakeOpt" [value]="stake" >
-                                <div class="bet-ammount"> ${{stake}} </div>
-                            </mat-radio-button>
 
-                    </mat-radio-group>     
-                </div>
-                <div class="d-flex justify-content-center">
-
-                <div id="stake-input" class="d-flex justify-content-center">
-                        <button 
-                          mat-button 
-                          mat-icon-button 
-                          matPrefix 
-                          (click) ="minus();"
-                          aria-label="Remove" >
-                          <mat-icon>remove</mat-icon>
-                        </button>
-                        <input matInput type="number" [(ngModel)]="stakeAmount" step="1" name="stakeAmount" autocomplete="off"/>
-                        <button 
-                            (click)="add();"
-                          mat-button 
-                          mat-icon-button 
-                          matSuffix
-                          aria-label="Add" >
-                          <mat-icon>add</mat-icon>
-                        </button>
-                </div>
-                </div>
-            </mat-step>
-            
-          </mat-stepper>
-        <div style="margin-bottom:20px" class="d-flex justify-content-around flex-wrap">
-            <button mat-raised-button fxFlex="48%" class="gradient-border" id="long-btn"> <span><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> UP</button>
-            <button mat-raised-button  fxFlex="48%" class="gradient-border" id="short-btn"> <span class="down"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> DOWN</button>
+<mat-stepper>
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="timer">
+        <mat-icon>timer</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="border_horizontal">
+        <mat-icon>border_horizontal</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="monetization_on">
+        <mat-icon>monetization_on   </mat-icon>
+    </ng-template>
+    <mat-step label="Match Duration:{{matchDuration}} seconds" state="timer">
+        <div class="description">
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
         </div>
+        <div class="wrapper d-flex justify-content-center">
+            <div id="match-input" class="d-flex justify-content-center">
+                <button 
+                    mat-button 
+                    mat-icon-button 
+                    matPrefix 
+                    (click) ="minusMatch();"
+                    aria-label="Remove" >
+                    <mat-icon>navigate_before</mat-icon>
+                </button>
+                <div style="width: 100%; display: block;" class="d-flex justify-content-center">
+                    <input style="width: 50px !important; display: block;" matInput type="number" [(ngModel)]="matchDuration" step="15" max="60" name="matchDuration" autocomplete="off"/>
+                    <span class="input-group-addon" style="margin-top:11px; width: 50px; color:rgb(85,83,115); font-weight: 600;">seconds</span>
+                </div>
+                <button 
+                    (click)="addMatch();"
+                    mat-button 
+                    mat-icon-button 
+                    matSuffix
+                    aria-label="Add" >
+                    <mat-icon>navigate_next</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step label="Threshold:{{bound}} %" state="border_horizontal">
+        <div class="description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+        </div>
+        <div class="wrapper">
+            <mat-form-field  id="match-input">
+                <input matInput type="number" [(ngModel)]="bound" step="0.1" name="bound" autocomplete="off"/>
+                <span matSuffix>%</span>
+            </mat-form-field>
+        </div>
+        <mat-radio-group 
+            aria-labelledby="example-radio-group-label"
+            class="d-flex justify-content-evenly"
+            [(ngModel)]="bound" [ngModelOptions]="{ standalone: true }">
+                <mat-radio-button  class="d-flex justify-content-center" disableRipple="true" *ngFor="let opt of boundOpt" [value]="opt" >
+                    {{opt}}
+                    <span matSuffix>%</span>
+                </mat-radio-button>    
+            </mat-radio-group>     
+    </mat-step>
+    <mat-step label="Stake: {{stakeAmount}}"  state="monetization_on">
+        <div class="description">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+        </div>
+        <div class="wrapper" >
+            <mat-radio-group 
+            aria-labelledby="example-radio-group-label"
+            class="d-flex justify-content-evenly"
+            [(ngModel)]="stakeAmount" [ngModelOptions]="{ standalone: true }">
+                    <mat-radio-button style="border: none !important; background-color: none!important; background: none!important;" disableRipple="true" *ngFor="let stake of stakeOpt" [value]="stake" >
+                        <div class="bet-ammount"> ${{stake}} </div>
+                    </mat-radio-button>
+
+            </mat-radio-group>     
+        </div>
+        <div class="d-flex justify-content-center">
+
+        <div id="stake-input" class="d-flex justify-content-center">
+                <button 
+                    mat-button 
+                    mat-icon-button 
+                    matPrefix 
+                    (click) ="minus();"
+                    aria-label="Remove" >
+                    <mat-icon>remove</mat-icon>
+                </button>
+                <input matInput type="number" [(ngModel)]="stakeAmount" step="1" name="stakeAmount" autocomplete="off"/>
+                <button 
+                    (click)="add();"
+                    mat-button 
+                    mat-icon-button 
+                    matSuffix
+                    aria-label="Add" >
+                    <mat-icon>add</mat-icon>
+                </button>
+        </div>
+        </div>
+    </mat-step>
+    
+    </mat-stepper>
+<div style="margin-bottom:20px" class="d-flex justify-content-around flex-wrap">
+    <button mat-raised-button  data-bs-toggle="modal" data-bs-target="#orderModal" fxFlex="48%" class="gradient-border" id="long-btn"> <span><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> UP</button>
+    <button mat-raised-button  data-bs-toggle="modal" data-bs-target="#orderModal" fxFlex="48%" class="gradient-border" id="short-btn"> <span class="down"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 1.207.707 7.793c-.63.63-.184 1.707.707 1.707h13.172c.89 0 1.337-1.077.707-1.707L8.707 1.207a1 1 0 0 0-1.414 0Z" fill="currentColor"></path></svg></span> DOWN</button>
+</div>
+
+
+
+        
+
