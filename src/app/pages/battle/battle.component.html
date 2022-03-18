@@ -56,7 +56,7 @@
 
 <ng-template #popContent>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                This tab shows all the information and components related to the trading game. 
         </p>
         <button (click)="p.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
@@ -69,7 +69,7 @@
 </ng-template>
 <ng-template #popContent2>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                This chart shows the open, high, low and close prices of an asset over a specified period of time. 
         </p>
         <button (click)="p2.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
@@ -82,7 +82,7 @@
 </ng-template>
 <ng-template #popContent3>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                This tab shows the components required to start the game.
         </p>
         <button (click)="p3.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
@@ -95,7 +95,7 @@
 </ng-template>
 <ng-template #popContent4>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                This tab shows all the information about the user. 
         </p>
         <button (click)="p4.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
@@ -109,7 +109,7 @@
 </ng-template>
 <ng-template #popContent5>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                This shows the basic user information, such as account balance and points.  
         </p>
         <button (click)="p5.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
@@ -123,16 +123,17 @@
 </ng-template>
 <ng-template #popContent6>
         <p style="color:rgb(27, 27, 27)">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus. 
+                Here is the leaderboard of best traders. Keep playing and reach first place! 
         </p>
         <button (click)="p2.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
                  <mat-icon style="color: #a17f36;" id="close-btn">close</mat-icon>
         </button> 
 
         <div>
-                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: -1px;" > 6/6 </h5>
+                <h5 style="color: #686868; position: absolute; font-size: 1.0rem; bottom: 10px;" > 6/6 </h5>
+                <button  (click)="p6.close(); hl(0); congr();" data-bs-toggle="modal" data-bs-target="#learnModal" mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(224 224 131); color: #1d1d1d; font-weight: bold; font-size: 0.7rem;"> Learn the Game Rules ? </button>
 
-                <button  (click)="p6.close(); hl(0); congr()" mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(231, 231, 231); color: #161616; float: right; font-weight: bold;"> Done</button>
+                <button  (click)="p6.close(); hl(0); congr(); " mat-button style=" margin-bottom: 5px; border-radius: 10px; background: rgb(231, 231, 231); color: #411d7a; float: right; font-weight: bold; font-size: 0.7rem;"> Done </button>
         </div>
 </ng-template>
 
@@ -179,13 +180,13 @@
                 <mat-icon style="color: #a6f069;" id="close-btn">close</mat-icon>
             </button>
             <h1 style=" text-align: center; color:#a6f069; font-weight:400">
-              How exactly Binary-Battle works?.  
+              UP and DOWN ?
             </h1>
             <div class="modal-body  d-flex justify-content-center" >
-                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/_Gyk1ryaf4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="400px" src="https://youtu.be/1Mhk4UHJsRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             <div style="width:70%; align-self:center;">
-                <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);"> ///////.....  </p>
+                <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);">   </p>
             </div>
     
             <div class="modal-footer" style="border: none; " style="align-self: center; height: 100px;">

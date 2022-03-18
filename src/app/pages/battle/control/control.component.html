@@ -14,7 +14,7 @@
     </ng-template>
     <mat-step label="Match Duration:{{matchDuration}} seconds" state="timer">
         <div class="description">
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            "The game continues the period of time that you choose here.             
         </div>
         <div class="wrapper d-flex justify-content-center">
             <div id="match-input" class="d-flex justify-content-center">
@@ -43,7 +43,7 @@
     </mat-step>
     <mat-step label="Threshold:{{bound}} %" state="border_horizontal">
         <div class="description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            In this section you have to choose the range that you think the stock chart is going to change. <br> Ex: UP with "1% Threshold" when BTC at 50,000 means you win at 50,500 (50,000 +1%) and lose at 49,500 (50,000-1%). 
         </div>
         <div class="wrapper">
             <mat-form-field  id="match-input">
@@ -63,7 +63,7 @@
     </mat-step>
     <mat-step label="Stake: {{stakeAmount}}"  state="monetization_on">
         <div class="description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            In this section you have to choose how many game-coins you want to bet in this match. <br>  Finally, you need to make your decision: the chart is going ‘Up’ or going ‘Down’. 
         </div>
         <div class="wrapper" >
             <mat-radio-group 
