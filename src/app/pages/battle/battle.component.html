@@ -55,7 +55,7 @@
 
 
 <ng-template #popContent>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 This tab shows all the information and components related to the trading game. 
         </p>
         <button (click)="p.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -68,7 +68,7 @@
         </div>
 </ng-template>
 <ng-template #popContent2>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 This chart shows the open, high, low and close prices of an asset over a specified period of time. 
         </p>
         <button (click)="p2.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -81,7 +81,7 @@
         </div>
 </ng-template>
 <ng-template #popContent3>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 This tab shows the components required to start the game.
         </p>
         <button (click)="p3.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -94,7 +94,7 @@
         </div>
 </ng-template>
 <ng-template #popContent4>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 This tab shows all the information about the user. 
         </p>
         <button (click)="p4.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -108,7 +108,7 @@
         </div>
 </ng-template>
 <ng-template #popContent5>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 This shows the basic user information, such as account balance and points.  
         </p>
         <button (click)="p5.close(); hl(0)" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -122,7 +122,7 @@
         </div>
 </ng-template>
 <ng-template #popContent6>
-        <p style="color:rgb(27, 27, 27)">
+        <p style="color:rgb(27, 27, 27); font-size: 0.7rem;">
                 Here is the leaderboard of best traders. Keep playing and reach first place! 
         </p>
         <button (click)="p2.close()" mat-button style="border-radius: 5px; padding: 1px; color: #686868; top: 2px; right: 2px; position: absolute;">            
@@ -145,8 +145,8 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade show" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="false">
+<!-- Modal LONG -->
+<div class="modal fade show" id="orderModalL" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="false">
         <div class="modal-dialog d-flex justify-content-center" >
           <div class="modal-content" style="  border: rgb(92, 122, 101) 2px solid; border-radius: 15px;" > 
             <div class="modal-header" style="border: none;" >
@@ -159,17 +159,46 @@
             </h1>
             
             <div style="width:70%; align-self:center;">
-                <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);"> Pair (Quote & Base): BTC-USD <br> <br>  Latest Price: ${{cp}} USD <br><br> Speculate <span style="color: #a6f069;"> UP</span> for <span> <br>  >  15s Match <br> >  Strike Prices are 1% deviated from Current Price <br> >  $50 Collateral </span>  </p>
+                <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);"> Pair (Quote & Base): BTC-USD <br> <br>  Current Price: ${{cp}} USD <br><br> Speculate <span style="color: #a6f069;"> UP</span> for  </p>
+                <div style="border:#1d1d1d 1px solid; border-radius: 20px;">
+                        <p style="display: block; margin-left: 10px;"> <br> ⏳ 15s Match <br> <br> 👑 Strike Prices are 1% deviated from 'Current Price' <br><br> 💰  $50 Stake <br> <br></p> 
+                </div>
             </div>
     
             <div class="modal-footer" style="border: none; " style="align-self: center; height: 100px;">
-                <button mat-raised-button style="background: #a6f069; color: #222222; font-weight: bold;" mat-button data-bs-dismiss="modal" (click)="game();"> Yes, Execute Now !</button>
+                <button mat-raised-button style="background: #a6f069; color: #222222; font-weight: bold;" mat-button data-bs-dismiss="modal" (click)="p.close();p2.close(); p3.close(); p4.close();  p5.close(); p6.close(); hl(0); game(); "> Confirm!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal SHORT -->
+      <div class="modal fade show" id="orderModalS" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="false">
+        <div class="modal-dialog d-flex justify-content-center" >
+          <div class="modal-content" style="  border: rgb(92, 122, 101) 2px solid; border-radius: 15px;" > 
+            <div class="modal-header" style="border: none;" >
+            </div>
+            <button style="background: none; box-shadow: none;  right: 5px; position: absolute; " mat-mini-fab data-bs-dismiss="modal">
+                <mat-icon style="color: #5445da;" id="close-btn">close</mat-icon>
+            </button>
+            <h1 style=" text-align: center; color:#5445da; font-weight:400">
+              Lets confirm your position again.  
+            </h1>
+            
+            <div style="width:70%; align-self:center;">
+                <p style="font-size: 1.2rem; line-height: 1; color: rgb(214, 214, 214);"> Pair (Quote & Base): BTC-USD <br> <br>  Current Price: ${{cp}} USD <br><br> Speculate <span style="color: #fc3b3b;"> DOWN</span> for  </p>
+                <div style="border:#1d1d1d 1px solid; border-radius: 20px;">
+                        <p style="display: block; margin-left: 10px;"> <br> ⏳ 15s Match <br> <br> 👑 Strike Prices are 1% deviated from 'Current Price' <br><br> 💰  $50 Stake <br> <br></p> 
+                </div>
+            </div>
+    
+            <div class="modal-footer" style="border: none; " style="align-self: center; height: 100px;">
+                <button mat-raised-button style="background: #5445da; color: #222222; font-weight: bold;" mat-button data-bs-dismiss="modal" (click)="p.close();p2.close(); p3.close(); p4.close();  p5.close(); p6.close(); hl(0); game();"> Confirm!</button>
             </div>
           </div>
         </div>
       </div>
     
-<!-- Modal -->
+<!-- Modal-->
 
       <div class="modal fade show" id="learnModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="false">
         <div class="modal-dialog d-flex justify-content-center" >
