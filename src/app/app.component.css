@@ -1,3 +1,4 @@
-.mat-tooltip.tooltip {
-    font-size: 1.1rem;
+::ng-deep .tooltip {
+
+    font-size: 1.1rem !important;
   }
