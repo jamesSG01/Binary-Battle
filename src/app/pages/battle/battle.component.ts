@@ -23,10 +23,16 @@ export class BattleComponent implements OnInit {
   start_animation:boolean = false; 
   you_won:boolean = false;
   you_lost:boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
-    
+    document.getElementsByClassName("long-short-btn").addEventListener('click', function() {
+      console.log('keys pressed');
+      hl(0);
+   });
+
+
     let button = document.getElementById('show-guide');
     button.click();
     //sub oninit 
@@ -36,6 +42,7 @@ export class BattleComponent implements OnInit {
       if (data.type !='ping')
         this.cp = JSON.parse(JSON.stringify(data)).data[0].p; //get price. 
     });
+
   }
 
   game() {    
@@ -148,5 +155,6 @@ export class BattleComponent implements OnInit {
     const timer: Timer = setTimeout(() => {  this.start_animation = false; 
     }, 3000)
   }
-
+  
+  
 }
