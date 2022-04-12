@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core'; 
 
 @Component({
   selector: 'app-global-header',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class GlobalHeaderComponent implements OnInit {
-
+  @Output("hl") myEvent = new EventEmitter<string>();
+  modalOff(): void {
+    this.myEvent.emit();
+  }
   constructor() { }
 
   ngOnInit(): void {
     
   }
-
+  
 }

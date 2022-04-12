@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
+import { Output, EventEmitter } from '@angular/core'; 
+
 @Component({
   selector: 'app-battle',
   templateUrl: './battle.component.html',
@@ -9,7 +11,7 @@ import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 export class BattleComponent implements OnInit {
 
   //declare variables. 
-  b1 = false;b2 = false;b3 = false; b4 = false;b5 = false;b6 = false; 
+  b1 = false;b2 = false;b3 = false; b4 = false;b5 = false;b6 = false; // outlining component when active. 
   congrats = false;
   dataStream: WebSocketSubject<any> = webSocket('wss://ws.finnhub.io?token=c83rosiad3ide9hecq4g');
   cp: any;
@@ -27,8 +29,8 @@ export class BattleComponent implements OnInit {
 
   ngOnInit(): void {
     
-    let button = document.getElementById('show-guide');
-    button.click();
+    this.showguide();
+    
     //sub oninit 
     this.dataStream.next({'type':'subscribe', 'symbol': 'BINANCE:BTCUSDT'});
     this.dataStream.asObservable().subscribe((data:any) => {
@@ -148,5 +150,12 @@ export class BattleComponent implements OnInit {
     const timer: Timer = setTimeout(() => {  this.start_animation = false; 
     }, 3000)
   }
-
+  showguide() {
+    let button = document.getElementById('show-guide');
+    button.click();
+  }
+  showrule() {
+    let button = document.getElementById('show-rule');
+    button.click();
+  }
 }

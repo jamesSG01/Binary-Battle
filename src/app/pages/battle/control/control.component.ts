@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import { Output, EventEmitter } from '@angular/core'; 
 
 @Component({
   selector: 'app-control',
@@ -19,6 +20,12 @@ export class ControlComponent implements OnInit {
   matchDuration:number = 15;
   step = 0;
   bound:number = 0.5;
+  @Output("hl") myEvent = new EventEmitter<string>();
+
+  modalOff(): void {
+    this.myEvent.emit();
+  }
+
   ngOnInit(): void {
     
   }

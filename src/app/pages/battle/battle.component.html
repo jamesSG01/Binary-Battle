@@ -1,4 +1,4 @@
-<app-global-header></app-global-header>
+<app-global-header (hl)=" p.close(); p2.close(); p3.close(); p4.close(); p5.close(); p6.close(); hl(0);"></app-global-header>
 
 <div class="container-fluid d-flex nowrap flex-row justify-content-around"> 
         
@@ -30,7 +30,7 @@
                        
                 </div>
                 
-                <app-control [hidden]="game_state" [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" placement="top" popoverTitle="Terminal"></app-control>
+                <app-control (hl)=" p.close(); p2.close(); p3.close(); p4.close(); p5.close(); p6.close(); hl(0);" [hidden]="game_state" [ngClass]="{'highlight':b3}" [autoClose]="false"  triggers="manual" #p3="ngbPopover" [ngbPopover]="popContent3" placement="top" popoverTitle="Terminal"></app-control>
         </div>
         
         <div [ngClass]="{'highlight':b4}" id="frame-2" class="container container-fluid flex-grow-1" [autoClose]="false"  triggers="manual" #p4="ngbPopover" [ngbPopover]="popContent4" popoverTitle="Profile Tab">
