@@ -24,9 +24,11 @@ export class AuthenticationComponent implements OnInit {
   };
   login(data):void{
     this.authService.login(data.email,data.password);
+    alert("Request Sent!")
   }
   register(data):void {
     console.log(data.username);
     this.authService.register(data.username, data.email,data.password);
+    alert("Request Sent!")
   }
 }
