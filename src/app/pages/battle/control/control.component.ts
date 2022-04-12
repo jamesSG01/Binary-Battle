@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
-import {battle}
 
 @Component({
   selector: 'app-control',
